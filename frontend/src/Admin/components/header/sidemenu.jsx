@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
@@ -12,37 +13,31 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar">
+    <div className="dash-sidebar">
       <ul className="menu">
         <li className="menu-item">
-          <i className="fa fa-dashboard"></i> Dashboard
-        </li>
-        <li className="menu-item" onClick={() => toggleMenu("userModule")}>
-          <i className="fa fa-user"></i> User Module
-          {openMenus["userModule"] }
-        </li>
-        {openMenus["userModule"] && (
-          <ul className="submenu">
-            <li>Submenu 1</li>
-            <li>Submenu 2</li>
-          </ul>
-        )}
-        <li className="menu-item" onClick={() => toggleMenu("reports")}>
-          <i className="fa fa-bar-chart"></i> Reports
-          {openMenus["reports"] }
-        </li>
-        {openMenus["reports"] && (
-          <ul className="submenu">
-            <li>Work Report</li>
-            <li>Employee Report</li>
-            <li>Monthly Report</li>
-          </ul>
-        )}
-        <li className="menu-item">
-          <i className="fa fa-book"></i> Documents
+          <i className="fa fa-dashboard"></i> <Link to="/admin/dashboard" >Dashboard </Link>
         </li>
         <li className="menu-item">
-          <i className="fa fa-cogs"></i> Settings
+          <i className="fa fa-user"></i>   <Link to="/admin/doctor" >Doctor </Link>
+        </li>
+        <li className="menu-item" >
+          <i className="fa fa-bar-chart"></i><Link to="/admin/specialities" >Specialities </Link>
+        </li>
+        <li className="menu-item" >
+          <i className="fa fa-bar-chart"></i><Link to="/admin/appointment" >Appointment Details</Link>
+        </li>
+        <li className="menu-item">
+          <i className="fa fa-book"></i><Link to="/admin/reports" >Reports</Link>
+        </li>
+        <li className="menu-item">
+          <i className="fa fa-book"></i><Link to="/admin/bio-waste" >Bio Waste Management</Link>
+        </li>
+        <li className="menu-item">
+          <i className="fa fa-cogs"></i><Link to="/admin/annual-report">Annual Report</Link> 
+        </li>
+          <li className="menu-item">
+          <i className="fa fa-cogs"></i><Link to="/admin/aseo">SEO</Link> 
         </li>
       </ul>
     </div>

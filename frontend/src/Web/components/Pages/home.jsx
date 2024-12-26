@@ -1,16 +1,23 @@
 
 import React from 'react';
-import stateOf from '../../assets/state-of-art.jpg';
-import hospitalBed from '../../assets/hospital-bed.svg';
+import stateOf from '../../../assets/state-of-art.jpg';
+import hospitalBed from '../../../assets/hospital-bed.svg';
+
 
 
 function Dashboard(){
+
+    $('.popup-youtube').magnificPopup({
+        type: 'iframe',
+        fixedContentPos: true
+    });
+
     return(
         <>
 <section className="pspace">
 <div className="container">
 <div className="grid2">
-<div class="about-col">
+<div className="about-col">
 
 <div>
 <h2 className="ch2 mb2">State-of-the-art diagnostic and imaging services</h2>
@@ -57,15 +64,16 @@ function Dashboard(){
 </div>
 
 <div>
-
-<a class="vlink popup-youtube playBut stretched-link" href="https://www.youtube.com/watch?v=dOM6qiqJJ3M">
+<div className='h100'>
+<a className="vlink popup-youtube playBut stretched-link" href="https://www.youtube.com/watch?v=dOM6qiqJJ3M">
 <img src={stateOf} alt="GKNMH Centre" />
-                           <div class="button is-play">
-                           <div class="button-icon">
+                           <div className="button is-play">
+                           <div className="button-icon">
                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" d="M7 6v12l10-6z"></path></svg>
                            </div>
 						   </div>
 					 </a>
+                     </div>
 </div>
 
 </div>

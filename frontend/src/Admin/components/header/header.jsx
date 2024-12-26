@@ -1,17 +1,18 @@
 import React from "react";
+import GknmLogo from '../../../assets/gknm-logo.png'
+
 // CSS file for styling
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="dash-header">
       {/* Left section with logo */}
       <div className="header-left">
         <img
-          src="logo_url_here"
+          src={GknmLogo}
           alt="Appac Media Logo"
           className="header-logo"
         />
-        <span className="header-subtitle">enabling solutions</span>
       </div>
 
       {/* Right section with icons and profile */}

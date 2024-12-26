@@ -1,26 +1,22 @@
 import Header from "./header";
-import Sidemenu from "./sidemenu";
+import Footer from "./footer";
 import Home from "../Pages/home";
+import "../webstyle.css";
 
-import { BrowserRouter ,Routes ,Route } from "react-router-dom";
 
-function Main(){
-    return(
-        <>
-        <Header/>
-        <div className="d-grid">
-            <div className="side-bar">
-                  <Sidemenu/>
-            </div>
-            <div className="content-div">
-            <h2>Content</h2>
-               <Routes>
-                  <Route path="/" element={<Home/>} ></Route>
-               </Routes>
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-            </div>
-        </div>
-        </>
-    )
+function Main() {
+  return (
+    < div className="web">
+      <Header />
+      <div className="w-content-div">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 export default Main;
