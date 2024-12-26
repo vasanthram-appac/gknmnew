@@ -10,7 +10,7 @@ function Main() {
   return (
     < div className="web">
       <Header />
-      <div className="content-div">
+      <div className="w-content-div">
         <Routes>
           <Route path="/" element={<Home />}></Route>
         </Routes>
