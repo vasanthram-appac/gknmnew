@@ -31,7 +31,7 @@ function header() {
           </div>
         </div>
         <div className="hu2">
-          <div className="eh" style={{ color: "#fe393a" }}>
+          <div className="eh">
           <img src={plus} alt="" />
             <p> Emergency Helpline</p>
           </div>
@@ -47,9 +47,13 @@ function header() {
             <img src={Logo} alt="" />
           </div>
         </div>
-        <div className="hd1a">
-          <div className="hd2">
-            <div className="hd2a dot-remove">
+        <nav className="hd1a">
+<ul class="w-hd1afl">
+
+          <li className="hd2">
+          <ul className="hd2-flex">
+            <li className="hd2a dot-remove">
+            <ul>
               <li className="">
                 <span className="dflex">
                   <a href="#">Specialities </a>
@@ -58,456 +62,55 @@ function header() {
                 <ul className="hover-down">
                   <div className="subclass">
                     <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
+                      <span className="liflex">
+                      <Link to="#"> <span>
+                       <img src={injection} alt="" />
+                         Appac media enabling1
                         </span>
-                        <a href="#">
                           <img src={rightArrow} alt="" />
-                        </a>
+                          </Link>
                       </span>
                     </li>
                     <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
+                      <span className="liflex">
+                      <Link to="#"> <span>
+                       <img src={injection} alt="" />
+                         Appac media enabling1
                         </span>
-                        <Link href="#">
                           <img src={rightArrow} alt="" />
-                        </Link>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
+                          </Link>
                       </span>
                     </li>
                   </div>
                   <div className="subclass">
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
+                  <li>
+                      <span className="liflex">
+                      <Link to="#"> <span>
+                       <img src={injection} alt="" />
+                         Appac media enabling1
                         </span>
-                        <a href="#">
                           <img src={rightArrow} alt="" />
-                        </a>
+                          </Link>
                       </span>
                     </li>
                     <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
+                      <span className="liflex">
+                      <Link to="#"> <span>
+                       <img src={injection} alt="" />
+                         Appac media enabling1
                         </span>
-                        <a href="#">
                           <img src={rightArrow} alt="" />
-                        </a>
+                          </Link>
                       </span>
                     </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
+
                   </div>
-                  <div className="subclass">
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                  </div>
-                  <div className="subclass">
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                  </div>
-                </ul>{" "}
+                </ul>
               </li>
-            </div>
-            <div className="hd2b dot-remove">
+              </ul>
+            </li>
+            <li className="hd2b dot-remove">
+              <ul>
               <li className="">
                 <span className="dflex">
                   <a href="#">Allied Services </a>
@@ -515,278 +118,82 @@ function header() {
                 </span>
                 <ul className="hover-down" id="d2">
                   <div className="subclass">
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
+                  <li>
+                      <span className="liflex">
+                      <Link to="#"> <span>
+                       <img src={injection} alt="" />
+                         Appac media enabling1
                         </span>
-                        <a href="#">
                           <img src={rightArrow} alt="" />
-                        </a>
+                          </Link>
                       </span>
                     </li>
                     <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
+                      <span className="liflex">
+                      <Link to="#"> <span>
+                       <img src={injection} alt="" />
+                         Appac media enabling1
                         </span>
-                        <a href="#">
                           <img src={rightArrow} alt="" />
-                        </a>
+                          </Link>
                       </span>
                     </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
+
                   </div>
-                  <div className="subclass">
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                    <li>
-                      <span id="liflex">
-                        <span style={{ gap: 10, display: "flex" }}>
-                          <img src={injection} alt="" />
-                          Appac media enabling <a href="#" />
-                        </span>
-                        <a href="#">
-                          <img src={rightArrow} alt="" />
-                        </a>
-                      </span>
-                    </li>
-                  </div>
-                </ul>{" "}
+                </ul>
               </li>
-            </div>
-            <div className="hd2c">
-              <Link path="">
+              </ul>
+            </li>
+            <li className="hd2c">
+              <Link to="">
                Patient Services
               </Link>
-            </div>
-            <div className="hd2c">
-              <a href="#">
+            </li>
+            <li className="hd2c">
+              <Link to="#">
                 <p>More</p>
-              </a>
-            </div>
-          </div>
-          <div className="hd3">
-            <div className="hd3a dflex">
-<img src={search} alt="" />
-            </div>
-            <div className="hd3b">
-              {" "}
-              <a href="#">
+              </Link>
+            </li>
+            </ul>
+          </li>
+          <li className="hd3">
+          <ul className="hd3-flex">
+            <li className="hd3a dflex">
+          <img src={search} alt="" />
+            </li>
+
+            <li className="hd3b">
+            <Link to="#">
                 <button>Book An Appoinment</button>
-              </a>
-            </div>
-            <div className="logo3 dflex">
+                </Link>
+            </li>
+
+            <li className="logo3 dflex">
               <img src={nabhLogo} alt="" />
-            </div>
-          </div>
-        </div>
+            </li>
+            </ul>
+          </li>
+          </ul>
+
+        </nav>
       </div>
       <div className="sd">
         <div className="sda">
-          {" "}
           <img src="image/gknm logo.png" alt="" />
         </div>
         <div className="sdb">
           <div className="sdba">
             <div className="hd3a dflex">
-              {" "}
-              <img src="image/srch.svg" alt="" />
+            <img src={search} alt="" />
             </div>
             <div className="hd3b">
-              {" "}
-              <a href="#">
+            <Link to="#">
                 <button>Book An Appoinment</button>
-              </a>
+                </Link>
             </div>
             <div className="logo3 dflex">
-              <img src="image/Nabh logo.png" alt="" />
+            <img src={nabhLogo} alt="" />
+
             </div>
           </div>
           {/* <div className="menu-btn" onclick={toggleMenu()}> */}
@@ -803,34 +210,24 @@ function header() {
         <ul>
           <li className="arrow">
             <span className="after">
-              <a href="#">Specialities</a>
+              <Link to="#">Specialities</Link>
               <i>
-                <img
-                  src="image/li rit.svg"
-                  alt=""
-                  // onclick={toggleSubMenu(event)}
-
-                />
+              <img src={downArrow} alt="" />
+                  {/* // onclick={toggleSubMenu(event)} */}
               </i>
             </span>
             <ul className="sub-menu m1">
               <li className="arrow">
-                <a href="#">Option 1</a>
+              <Link to="#">Option 1</Link>
               </li>
               <li className="arrow">
-                <a href="#">Option 2</a>
-              </li>
-              <li className="arrow">
-                <a href="#">Option 3</a>
-              </li>
-              <li className="arrow">
-                <a href="#">Option 4</a>
+              <Link to="#">Option 2</Link>
               </li>
             </ul>
           </li>
           <li className="arrow">
             <span className="after">
-              <a href="#">Allied Services</a>
+            <Link to="#">Allied Services</Link>
               <i>
                 <img
                   src="image/li rit.svg"
@@ -841,76 +238,17 @@ function header() {
             </span>
             <ul className="sub-menu m2">
               <li>
-                <a href="#">Option 1</a>
+              <Link to="#">Option 1</Link>
               </li>
               <li>
-                <a href="#">Option 2</a>
+              <Link to="#">Option 2</Link>
               </li>
-              <li>
-                <a href="#">Option 3</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
-              <li>
-                <a href="#">Option 4</a>
-              </li>
+
             </ul>
           </li>
           {/* <li onclick={toggleSubMenu(event)} className="arrow"> */}
           <li  className="arrow">
-            <a href="#">Patient Services</a>
+          <Link to="#">Patient Services</Link>
           </li>
         </ul>
       </nav>
