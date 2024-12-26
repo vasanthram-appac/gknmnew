@@ -56,7 +56,7 @@ function header() {
             <ul>
               <li className="">
                 <span className="dflex">
-                  <a href="#">Specialities </a>
+                  <Link to="/specialities">Specialities </Link>
                   <img src={downArrow} alt="" />
                 </span>
                 <ul className="hover-down">
@@ -210,7 +210,7 @@ function header() {
         <ul>
           <li className="arrow">
             <span className="after">
-              <Link to="#">Specialities</Link>
+              <Link to="/specialist">Specialities</Link>
               <i>
               <img src={downArrow} alt="" />
                   {/* // onclick={toggleSubMenu(event)} */}
