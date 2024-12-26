@@ -29,6 +29,48 @@ const doctorschema = new mongoose.Schema({
         default: null,
         maxlength: 20,
     },
+    qualification: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 255,
+    },
+    department: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 255,
+    },
+    image: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 255,
+    },
+    new_op: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 100,
+    },
+    review_op: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 100,
+    },
+    experience: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 25,
+    },
+    expertise: {
+        type: String,
+        required: false,
+        default: null,
+        maxlength: 255,
+    },
     status: {
         type: String,
         enum: ['Active', 'Inactive'],
