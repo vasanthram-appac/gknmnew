@@ -4,7 +4,6 @@ import Sidemenu from "./sidemenu";
 import Doctor from "../Pages/Doctor";
 
 
-import '../dashstyle.css'
 import Dashboard from "../Pages/Dashboard";
 
 function Main() {
@@ -21,7 +20,7 @@ function Main() {
         </div>
       </div>
       </div>
-  
+
   );
 }
 
