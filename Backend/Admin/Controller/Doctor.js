@@ -1,25 +1,9 @@
-var Doctormodel = require('../../Model/Doctormodel');
-
-// GET method to retrieve reports
-exports.getreport = async (req, res, next) => {
-  try {
-    const data = await Doctormodel.find({}, { id: 1, name: 1, qualification: 1, department: 1, status: 1 }); // Select specific fields
-    res.json({
-      msg: 'Report retrieved successfully',
-      data,
-    });
-  } catch (error) {
-    res.status(404).json({
-      msg: 'Report not retrieved',
-      error: error.message,
-    });
-  }
-};
-
-
+const Doctormodel = require('../../Model/Doctormodel');
 const { body, validationResult } = require("express-validator");
-const { move } = require('../Route/adminbackendroute');
+const fs = require('fs');
+const path = require('path');
 
+// Validation middleware
 const validateDoctor = [
   body("name")
     .notEmpty().withMessage("Name is required")
@@ -35,33 +19,48 @@ const validateDoctor = [
   body("department")
     .notEmpty().withMessage("Department is required"),
 
-  // Image: optional, but if provided, must be a valid URL and an image format
   body("image")
-    .optional({ checkFalsy: true }) // Allows empty string, but validates if provided
-    .matches(/\.(jpeg|jpg|gif|png|webp)$/i).withMessage("Image must be a valid image format (jpeg, jpg, gif, png, webp)"),
+    .optional({ checkFalsy: true })
+    .matches(/\.(webp)$/i).withMessage("Image must be a valid image format (webp)"),
 
-  // New OP Days: optional, but if provided, must be numeric
   body("new_op")
-    .optional({ checkFalsy: true }) // Allows empty string, but validates if provided
+    .optional({ checkFalsy: true })
     .isNumeric().withMessage("New OP Days must be a number"),
 
-  // Review OP Days: optional, but if provided, must be numeric
   body("review_op")
-    .optional({ checkFalsy: true }) // Allows empty string, but validates if provided
+    .optional({ checkFalsy: true })
     .isNumeric().withMessage("Review OP Days must be a number"),
 
-  // Experience: optional, but if provided, must be numeric
   body("experience")
-    .optional({ checkFalsy: true }) // Allows empty string, but validates if provided
+    .optional({ checkFalsy: true })
     .isNumeric().withMessage("Experience must be a valid number"),
 
   body("expertise")
-    .optional({ checkFalsy: true }) 
+    .optional({ checkFalsy: true })
     .notEmpty().withMessage("Expertise is required"),
 ];
 
-// Controller
+// GET method to retrieve reports
+exports.getreport = async (req, res, next) => {
+  try {
+    const data = await Doctormodel.find({}, { id: 1, name: 1, qualification: 1, department: 1, status: 1 });
+    res.json({
+      msg: 'Report retrieved successfully',
+      data,
+    });
+  } catch (error) {
+    res.status(404).json({
+      msg: 'Report not retrieved',
+      error: error.message,
+    });
+  }
+};
+
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
 exports.addDoctor = [
+  upload.single('image'),  // Handle file upload
   validateDoctor,
   async (req, res) => {
     const errors = validationResult(req);
@@ -71,26 +70,58 @@ exports.addDoctor = [
     }
 
     try {
-      const newDoctor = new Doctormodel(req.body); // Correct model name
+      const { body, file } = req;
+      const newDoctor = new Doctormodel(body);
 
-      if(!empty(newDoctor.image)){
+      // Check if file exists in the request
+      if (file) {
+        // Validate file type and size
+        if (!/\.(webp)$/i.test(file.originalname)) {
+          return res.status(400).json({ msg: 'Invalid file format. Only .webp images are allowed.' });
+        }
 
-        dir='frontend/public/doctor'
+        // Ensure the upload directory exists
+        const uploadDir = path.join(__dirname, '../../frontend/public/images/doctor');
+        if (!fs.existsSync(uploadDir)) {
+          fs.mkdirSync(uploadDir, { recursive: true });
+        }
+        // Define the path where the file will be saved
+        const imagePath = path.join(uploadDir, file.filename);
 
-        if dir not found need to create  after move the image path save in table 
+        // Move the file to the upload directory 
+        fs.renameSync(file.path, imagePath);
 
+        // Save the relative path of the image in the database
+        newDoctor.image = `/images/doctor/${file.filename}`;
+      } 
 
-      }
-
+      // Save the new doctor to the database
       const savedDoctor = await newDoctor.save();
-      res.json({ msg: "Doctor added successfully", data: savedDoctor });
+      res.json({ msg: 'Doctor added successfully', data: savedDoctor });
     } catch (err) {
-      res.status(500).json({ msg: "Error adding doctor", error: err.message });
+      console.error('Error adding doctor:', err);
+      res.status(500).json({ msg: 'Error adding doctor', error: err.message });
     }
   },
 ];
 
+// In Controller/Doctor.js
+exports.updateDoctor = async (req, res) => {
+  const { id } = req.params; // Get the ID from the URL parameter
+  const { body } = req;
+ 
+  try {
+    const doctor = await Doctormodel.findByIdAndUpdate(id, body, { new: true });
+    
+    if (!doctor) {
+      return res.status(404).json({ msg: 'Doctor not found' });
+    }
 
-
-
-
+    res.json({
+      msg: 'Doctor updated successfully',
+      data: doctor
+    });
+  } catch (err) {
+    res.status(500).json({ msg: 'Error updating doctor', error: err.message });
+  }
+};

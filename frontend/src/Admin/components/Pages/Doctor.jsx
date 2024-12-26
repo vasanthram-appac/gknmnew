@@ -9,21 +9,31 @@ const CombinedComponent = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortModel, setSortModel] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
-  const [newDoctor, setNewDoctor] = useState({ name: "", status: "" }); // New doctor form data
+  const [newDoctor, setNewDoctor] = useState({
+    id: "",
+    name: "",
+    status: "",
+    qualification: "",
+    department: "",
+    image: "",
+    new_op: "",
+    review_op: "",
+    experience: "",
+    expertise: "",
+  }); 
 
-  // Doctor Columns
   const doctorColumns = [
     { field: "index", headerName: "S.No.", width: 90 },
     { field: "name", headerName: "Name", width: 150 },
     { field: "qualification", headerName: "Qualification", width: 150 },
-    { field: "department", headerName: "department", width: 150 },
+    { field: "department", headerName: "Department", width: 150 },
     { field: "status", headerName: "Status", width: 150 },
     {
       field: "action",
       headerName: "Action",
       width: 150,
       renderCell: (params) => (
-        <button onClick={() => alert(`Editing ${params.row.name}`)}>Edit</button>
+        <button onClick={() => handleEditDoctor(params.row)}>Edit</button>
       ),
     },
   ];
@@ -71,40 +81,74 @@ const CombinedComponent = () => {
   // Handle add doctor button click
   const handleAddDoctor = () => {
     setIsModalOpen(true);
+    setNewDoctor({
+      id: "",
+      name: "",
+      qualification: "",
+      department: "",
+      status: "Active",
+    });
   };
 
   // Handle close modal
   const handleCloseModal = () => {
+    setIsModalOpen(false);
     setNewDoctor({
+      id: "",
       name: "",
-      status: "",
       qualification: "",
       department: "",
+      status: "",
       image: "",
       new_op: "",
       review_op: "",
       experience: "",
-      expertise: ""
+      expertise: "",
     });
-    setIsModalOpen(false);
   };
 
-  // Handle form submit for adding a new doctor
+  const handleEditDoctor = (doctor) => {
+    setNewDoctor(doctor); 
+    setIsModalOpen(true); 
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("name", newDoctor.name);
+    formData.append("qualification", newDoctor.qualification);
+    formData.append("department", newDoctor.department);
+    formData.append("status", newDoctor.status);
+    if (newDoctor.image) formData.append("image", newDoctor.image);
 
-    fetch("http://localhost:8000/test/api/doctor", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newDoctor),
+    // If new_op, review_op, experience, or expertise are provided, add them
+    if (newDoctor.new_op) formData.append("new_op", newDoctor.new_op);
+    if (newDoctor.review_op) formData.append("review_op", newDoctor.review_op);
+    if (newDoctor.experience) formData.append("experience", newDoctor.experience);
+    if (newDoctor.expertise) formData.append("expertise", newDoctor.expertise);
+
+    // If doctor has an ID, update existing doctor
+    const method = newDoctor.id ? "PUT" : "POST";
+    const url = newDoctor.id
+      ? `http://localhost:8000/test/api/doctor/${newDoctor.id}`
+      : "http://localhost:8000/test/api/doctor";
+
+    fetch(url, {
+      method,
+      body: formData, // Send formData instead of JSON
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.msg === "Doctor added successfully") {
-          alert("Doctor added successfully");
-          setDoctorRows((prevRows) => [...prevRows, res.data]);
+        if (res.msg === "Doctor added successfully" || res.msg === "Doctor updated successfully") {
+          alert(res.msg);
+          // If updated, replace the old doctor in the rows
+          if (newDoctor.id) {
+            setDoctorRows((prevRows) =>
+              prevRows.map((row) => (row.id === newDoctor.id ? res.data : row))
+            );
+          } else {
+            setDoctorRows((prevRows) => [...prevRows, res.data]);
+          }
           handleCloseModal();
         }
       })
@@ -113,7 +157,6 @@ const CombinedComponent = () => {
       });
   };
 
-  // Filtered rows based on search query
   const filteredDoctorRows = doctorRows.filter((row) => {
     return (
       row.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -122,12 +165,32 @@ const CombinedComponent = () => {
     );
   });
 
-  // Dynamically generate S.No. for filtered rows
-  const rowsWithIndex = filteredDoctorRows.map((row, index) => ({
-    ...row,
-    index: index + 1,
-  }));
-
+  const getSortedRows = (rows) => {
+    const sortedRows = [...rows]; 
+  
+    sortedRows.sort((a, b) => {
+      if (sortModel.length === 0) return 0; 
+  
+      const { field, sort } = sortModel[0]; 
+      const isAsc = sort === "asc"; 
+  
+      return isAsc
+        ? a[field] > b[field]
+          ? 1
+          : -1
+        : a[field] < b[field]
+        ? 1
+        : -1;
+    });
+  
+    return sortedRows.map((row, index) => ({
+      ...row,
+      index: index + 1, 
+    }));
+  };
+  
+  const rowsWithIndex = getSortedRows(filteredDoctorRows); 
+  
   return (
     <div>
       <section>
@@ -140,7 +203,10 @@ const CombinedComponent = () => {
           <div className="rpt-wrp">
             <div className="report-sts">
               <div className="w-table-cwrp">
-                <div className="" style={{ float: "right" }}>
+                <div
+                  className=""
+                  style={{ float: "right", position: "relative", zIndex: 1 }}
+                >
                   <button onClick={handleAddDoctor}>Add Doctor</button>
                 </div>
 
@@ -185,87 +251,142 @@ const CombinedComponent = () => {
         </div>
       </section>
 
-      {/* Modal for Adding Doctor */}
-      <Modal isOpen={isModalOpen} onRequestClose={handleCloseModal}>
-        <h2>Add Doctor</h2>
-        <form onSubmit={handleFormSubmit} id="doctorForm">
+      {/* Modal for Adding/Editing Doctor */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleCloseModal}
+        style={{ overlay: { zIndex: 99 } }}
+      >
+        <h2>{newDoctor.id ? "Edit Doctor" : "Add Doctor"}</h2>
+        <form onSubmit={handleFormSubmit} id="doctorForm" encType="multipart/form-data">
           <div className="row">
+            {/* Input Fields */}
             <div className="col-lg-6">
               <label>
                 Name:
-                <input type="text" name="name" value={newDoctor.name} onChange={(e) => setNewDoctor({ ...newDoctor, name: e.target.value })}/>
+                <input
+                  type="text"
+                  name="name"
+                  value={newDoctor.name}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, name: e.target.value })
+                  }
+                />
               </label>
             </div>
-
             <div className="col-lg-6">
               <label>
-              Qualification:
-                <input type="text" name="qualification" value={newDoctor.qualification} onChange={(e) => setNewDoctor({ ...newDoctor, qualification: e.target.value })}/>
+                Qualification:
+                <input
+                  type="text"
+                  name="qualification"
+                  value={newDoctor.qualification}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, qualification: e.target.value })
+                  }
+                />
               </label>
             </div>
-
             <div className="col-lg-6">
               <label>
-              Department:
-                <input type="text" name="department" value={newDoctor.department} onChange={(e) => setNewDoctor({ ...newDoctor, department: e.target.value })}/>
+                Department:
+                <input
+                  type="text"
+                  name="department"
+                  value={newDoctor.department}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, department: e.target.value })
+                  }
+                />
               </label>
             </div>
-
             <div className="col-lg-6">
               <label>
-              Image:
-                <input type="file" name="image" value={newDoctor.image} onChange={(e) => setNewDoctor({ ...newDoctor, image: e.target.value })} accept="image/webp"/>
+                Image:
+                <input
+                  type="file"
+                  name="image"
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, image: e.target.files[0] })
+                  }
+                  accept="image/webp"
+                />
               </label>
             </div>
-
+            {/* Additional Fields */}
             <div className="col-lg-6">
               <label>
-              New OP Days:
-              <input type="text" name="new_op" value={newDoctor.new_op} onChange={(e) => setNewDoctor({ ...newDoctor, new_op: e.target.value })}/>
+                New OP Days:
+                <input
+                  type="text"
+                  name="new_op"
+                  value={newDoctor.new_op}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, new_op: e.target.value })
+                  }
+                />
               </label>
             </div>
-
             <div className="col-lg-6">
               <label>
-              Review OP Days:
-              <input type="text" name="review_op" value={newDoctor.review_op} onChange={(e) => setNewDoctor({ ...newDoctor, review_op: e.target.value })}/>
+                Review OP Days:
+                <input
+                  type="text"
+                  name="review_op"
+                  value={newDoctor.review_op}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, review_op: e.target.value })
+                  }
+                />
               </label>
             </div>
-
             <div className="col-lg-6">
               <label>
-              Experience:
-              <input type="text" name="experience" value={newDoctor.experience} onChange={(e) => setNewDoctor({ ...newDoctor, experience: e.target.value })}/>
+                Experience:
+                <input
+                  type="text"
+                  name="experience"
+                  value={newDoctor.experience}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, experience: e.target.value })
+                  }
+                />
               </label>
             </div>
-
             <div className="col-lg-6">
               <label>
-              Expertise:
-              <input type="text" name="expertise" value={newDoctor.expertise} onChange={(e) => setNewDoctor({ ...newDoctor, expertise: e.target.value })}/>
+                Expertise:
+                <input
+                  type="text"
+                  name="expertise"
+                  value={newDoctor.expertise}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, expertise: e.target.value })
+                  }
+                />
               </label>
             </div>
-
-            <div className="col-lg-6">
+            <div className="col-lg-12">
               <label>
                 Status:
-                <div className="mt-2">
-                  <div className="form-check form-check-inline">
-                    <input type="radio" id="activeRadio1" name="status" value="Active" className="form-check-input" required checked={newDoctor.status == "Active"} onChange={(e) => setNewDoctor({ ...newDoctor, status: e.target.value })} />
-                    <label htmlFor="activeRadio1" className="label-color">Active</label>
-                  </div>
-
-                  <div className="form-check form-check-inline">
-                    <input type="radio" id="inactiveRadio2" name="status" value="Inactive" className="form-check-input" required checked={newDoctor.status == "Inactive"} onChange={(e) => setNewDoctor({ ...newDoctor, status: e.target.value })} />
-                    <label htmlFor="inactiveRadio2" className="label-color">Inactive</label>
-                  </div>
-                </div>
+                <select
+                  value={newDoctor.status}
+                  onChange={(e) =>
+                    setNewDoctor({ ...newDoctor, status: e.target.value })
+                  }
+                >
+                  <option value="Active">Active</option>
+                  <option value="Inactive">Inactive</option>
+                </select>
               </label>
             </div>
+            <div className="col-lg-12">
+              <button type="submit">{newDoctor.id ? "Update" : "Add"}</button>
+              <button type="button" onClick={handleCloseModal}>
+                Close
+              </button>
+            </div>
           </div>
-
-          <button type="submit">Submit</button>
-          <button type="button" onClick={handleCloseModal}>Cancel</button>
         </form>
       </Modal>
     </div>
