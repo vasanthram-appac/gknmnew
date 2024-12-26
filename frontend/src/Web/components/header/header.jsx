@@ -163,8 +163,8 @@ function header() {
             </li>
 
             <li className="hd3b">
-            <Link to="#">
-                <button>Book An Appoinment</button>
+            <Link to="#" className='cbtn'>
+                Book An Appoinment
                 </Link>
             </li>
 
