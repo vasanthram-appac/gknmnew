@@ -770,7 +770,7 @@ background-color: #f0f0f0; /* Hover effect for the items */
 color: #39b54a;
 cursor: pointer;
 }
-#liflex{
+.liflex{
   display: flex;
   justify-content: space-between;
   gap:10px;
@@ -804,6 +804,18 @@ cursor: pointer;
   display: flex;
   align-items: center;
 }
+
+
+.hd2-flex {display: flex;align-items: center;gap: 50px;}
+.hd3-flex {display: flex;align-items: center;gap: 50px;}
+.w-hd1afl {display: flex;align-items: center;gap: 50px;}
+ul, ol {
+  list-style-type: none; /* Removes bullets or numbers */
+  margin: 0; /* Optional: removes default margins */
+  padding: 0; /* Optional: removes default padding */
+}
+
+
 @media (max-width:1400px) {
   .hover-down {
       right: 120px;
