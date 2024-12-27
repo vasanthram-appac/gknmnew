@@ -1,10 +1,11 @@
 import Header from "./header";
 import Footer from "./footer";
 import Home from "../Pages/home";
+import Specialities from "../Pages/Specialities";
 import "../webstyle.css";
 
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
       <div className="w-content-div">
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/specialities" element={<Specialities/>}></Route>
         </Routes>
       </div>
       <Footer />

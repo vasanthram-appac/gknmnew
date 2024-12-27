@@ -7,7 +7,7 @@ import Login from "./Admin/components/Pages/Login";
 function App(){
    return(
     <Routes>
-    <Route path="/" element={<Mainweb />} ></Route>
+    <Route path="*" element={<Mainweb />} ></Route>
     <Route path="/admin" element={<Login />} ></Route>
     <Route path="/admin/*" element={<AdminMain />} ></Route>
   </Routes>

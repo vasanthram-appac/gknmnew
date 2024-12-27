@@ -1081,3 +1081,94 @@ gap: 16px;
   .btn-fl {gap: 10px;}.button-icon {width: 65px;height: 45px;}.statistics {padding: 15px;}
 
 }
+
+/* from surya  */
+.w-banner-container{
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+.w-feature-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7ff;
+  padding: 20px;
+}
+
+.w-feature-card {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7ff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  max-width: 300px;
+}
+
+.w-icon {
+  font-size: 24px;
+}
+
+.w-star-icon {
+  color: #2c75e2;
+}
+
+.w-thumb-icon {
+  color: #00b600;
+}
+
+.w-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #2c75e2;
+}
+
+.w-subtitle {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+.w-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.w-hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #2c75e2; /* Blue color */
+}
+
+.w-hero-highlight {
+  color: #00b600; /* Green color */
+}
+
+.w-hero-subtitle {
+  font-size: 18px;
+  color: #4a4a4a; /* Gray color */
+  margin: 10px 0 30px 0;
+}
+
+.w-hero-button {
+  font-size: 16px;
+  color: #2c75e2;
+  padding: 10px 20px;
+  border: 2px solid #2c75e2;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.w-hero-button:hover {
+  background-color: #2c75e2;
+  color: #fff;
+}
