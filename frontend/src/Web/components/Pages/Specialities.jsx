@@ -6,7 +6,7 @@ function Specialities(){
       <div  className='conatainer'>
         <div className="w-banner-container">
           <div className="w-rdiv">
-            <img  src="images/bnr1.png"/>
+            <img  src="images/cimages/bnr1.png"/>
           </div>
 
         <div  className='w-l-div'>
