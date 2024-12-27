@@ -43,7 +43,7 @@ function header() {
       <div className="hd">
         <div className="hd1">
           <div className="logo1">
-            <img src='images/cimages/down-arrow.svg' alt="" />
+          <img src={Logo} alt="" />
           </div>
         </div>
         <nav className="hd1a">
