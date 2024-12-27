@@ -1,16 +1,17 @@
 var express = require('express');
 const { Login } = require('../Controller/Adminuser');
-const { getreport } = require('../Controller/Doctor');
+const { getreport, addDoctor, updateDoctor } = require('../Controller/Doctor');  // Assuming updateDoctor is implemented
 
 var router = express.Router();
-// router.route('/login').get(getLogin);
 
+// Login route
 router.route('/login').post(Login);
 
-router.route('/doctor').get(getreport);
+router.route('/doctor')  
+  .get(getreport)        
+  .post(addDoctor);      
 
-// Route to update a specific report by ID
-
+router.route('/doctor/:id')  
+  .put(updateDoctor); 
+       
 module.exports = router;
-
-

@@ -1,4 +1,4 @@
-import downArrow from '../../../assets/down-arrow.svg';
+import downArrow from '../../../../public/images/cimages/down-arrow.svg';
 import rightArrow from '../../../assets/right-arrow.svg';
 import rightArrowCircle from '../../../assets/right-arrow-circle.svg';
 import plus from '../../../assets/plus.svg';
@@ -13,7 +13,6 @@ import { Link } from 'react-router-dom';
 
 function header() {
 
-
     return(
         <>
           <div className="header">
@@ -23,7 +22,7 @@ function header() {
         <div className="hu1">
           <div className="hp">
             <p> Health Packages </p>
-            <img src={downArrow} alt="" />
+            <img src="images/cimages/down-arrow.svg" alt="" />
           </div>
           <div className="pl">
             <p> Patient Login</p>
@@ -44,7 +43,7 @@ function header() {
       <div className="hd">
         <div className="hd1">
           <div className="logo1">
-            <img src={Logo} alt="" />
+          <img src={Logo} alt="" />
           </div>
         </div>
         <nav className="hd1a">
@@ -163,8 +162,8 @@ function header() {
             </li>
 
             <li className="hd3b">
-            <Link to="#">
-                <button>Book An Appoinment</button>
+            <Link to="#" className='cbtn'>
+                Book An Appoinment
                 </Link>
             </li>
 
@@ -179,7 +178,7 @@ function header() {
       </div>
       <div className="sd">
         <div className="sda">
-          <img src="image/gknm logo.png" alt="" />
+          <img src={Logo} alt="" />
         </div>
         <div className="sdb">
           <div className="sdba">

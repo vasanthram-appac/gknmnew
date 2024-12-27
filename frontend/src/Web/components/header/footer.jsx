@@ -1,5 +1,5 @@
 
-import Logo from '../../../assets/logo.svg';
+import Logo from '../../../../public/images/cimages/logo.svg';
 
 
 function footer(){
