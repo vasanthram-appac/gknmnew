@@ -5,6 +5,8 @@ import { jsPDF } from "jspdf"; // For PDF Export
 import Modal from "react-modal";
 
 const CombinedComponent = () => {
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+ 
   const [refreshData, setRefreshData] = useState(false);
   const [doctorRows, setDoctorRows] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,6 +25,20 @@ const CombinedComponent = () => {
     expertise: "",
     languages: "",
     doctordetails: "",
+  });
+  const [columnVisibilityModel, setColumnVisibilityModel] = useState({
+    index: true,
+    name: true,
+    qualification: true,
+    department: true,
+    new_op: true, 
+    review_op: true, 
+    experience: true,
+    expertise: false, 
+    languages: true,
+    status: true,
+    doctordetails: false,
+    action: true,
   });
   const doctorColumns = [
     { field: "index", headerName: "S.No.", width: 90 },
@@ -62,9 +78,11 @@ const CombinedComponent = () => {
       ),
     },
   ];
+
   
   useEffect(() => {
-    fetch("http://localhost:8000/test/api/doctor")
+
+    fetch(`${baseUrl}doctor`)
       .then((res) => res.json())
       .then((res) => {
         if (res.data) {
@@ -172,7 +190,7 @@ const CombinedComponent = () => {
   const handleDeleteDoctor = async (doctor) => {
     if (window.confirm(`Are you sure you want to delete Dr. ${doctor.name}?`)) {
       try {
-        const response = await fetch(`http://localhost:8000/test/api/doctor/${doctor.id}`, {
+        const response = await fetch(`${baseUrl}doctor/${doctor.id}`, {
           method: 'DELETE',
         });
 
@@ -213,8 +231,8 @@ const CombinedComponent = () => {
     // If doctor has an ID, update existing doctor
     const method = newDoctor.id ? "PUT" : "POST";
     const url = newDoctor.id
-      ? `http://localhost:8000/test/api/doctor/${newDoctor.id}`
-      : "http://localhost:8000/test/api/doctor";
+      ? `${baseUrl}doctor/${newDoctor.id}`
+      : `${baseUrl}doctor`;
 
     fetch(url, {
       method,
@@ -306,7 +324,7 @@ const CombinedComponent = () => {
       if (window.confirm(`Are you sure you want to delete Dr. ${removedTitle}?`)) {
         try {
           // Send DELETE request to the server
-          const response = await fetch(`http://localhost:8000/test/api/doctordetail/${removedEditId}`, {
+          const response = await fetch(`${baseUrl}doctordetail/${removedEditId}`, {
             method: 'DELETE',
           });
   
@@ -381,7 +399,8 @@ const CombinedComponent = () => {
                       Toolbar: GridToolbar,
                     }}
                     sortModel={sortModel}
-                    onSortModelChange={handleSortModelChange}
+                    columnVisibilityModel={columnVisibilityModel} // Add column visibility model
+                    onColumnVisibilityModelChange={(newModel) => setColumnVisibilityModel(newModel)}
                   />
                 </div>
               </div>

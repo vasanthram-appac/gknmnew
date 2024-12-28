@@ -24,7 +24,7 @@ app.use(express.json());
 // Register routes
 // app.use('/',productRoutes);
 // app.use('/',loginRoutes);
-app.use("/test/api/", adminbackendroute);
+app.use("/", adminbackendroute);
 
 
 // Start the server

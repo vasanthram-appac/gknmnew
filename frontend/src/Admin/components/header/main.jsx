@@ -2,9 +2,10 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Header from "./header";
 import Sidemenu from "./sidemenu";
 import Doctor from "../Pages/Doctor";
-
+import Specialities from "../Pages/Specialities";
 
 import Dashboard from "../Pages/Dashboard";
+
 
 function Main() {
   return (
@@ -15,6 +16,7 @@ function Main() {
         <div className="content-div">
           <Routes>
           <Route path="/doctor" element={<Doctor />} ></Route>
+          <Route path="/specialities" element={<Specialities />} ></Route>
           <Route path="/dashboard" element={<Dashboard />} ></Route>
           </Routes>
         </div>

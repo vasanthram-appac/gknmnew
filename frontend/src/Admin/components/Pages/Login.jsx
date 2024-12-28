@@ -22,7 +22,7 @@ const Login = () => {
 
         try {
             // Backend validation
-            const response = await fetch("http://localhost:8000/test/api/login", {
+            const response = await fetch("http://localhost:8000/login", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -35,7 +35,9 @@ const Login = () => {
             if (response.ok) {
                 // Successful login, redirect to dashboard
                 alert("Login successful!");
-                navigate("/admin/doctor");
+                sessionStorage.setItem("username", data.data.username);
+                sessionStorage.setItem("token", data.data.token);
+                navigate("/admin/doctor"); 
                 setUsername(""); // Clear input fields
                 setPassword(""); // Clear input fields
             } else {
