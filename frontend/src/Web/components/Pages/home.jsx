@@ -177,13 +177,19 @@ function Dashboard(){
     const CarouselComponent = () => {
       const options = {
         margin: 20,
+        duration: 2000,
+        speed: 1000,
         responsiveClass: true,
         autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
         loop: true,
-        nav: false,
-        dots: true,
+        nav: true,
+        dots: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+       },
         responsive: {
           0: { items: 1 },
           450: { items: 2 },
@@ -196,65 +202,65 @@ function Dashboard(){
       return (
         <div>
           {/* Carousel Section */}
-          <OwlCarousel className="owl-theme" {...options}>
+          <OwlCarousel className="owl-theme doc-slider" {...options}>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+              <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>
               </div>
             </div>
             <div className="w-photo">
-              <img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" />
+            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
               <div className="doc-cnt">
               <h3>Jenny Andersen</h3>
               <p>MBBS, DA, DNB, IDCCM</p>

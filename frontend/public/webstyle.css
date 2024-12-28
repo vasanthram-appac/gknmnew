@@ -370,6 +370,12 @@ button:focus-visible {
   padding-top: 12px;
 }
 .doc-cnt {padding-left: 15px;}
+.doc-slider .owl-prev::after {content: '';background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-width='1'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16 12H8m0 0l3-3m-3 3l3 3'/%3E%3C/g%3E%3C/svg%3E");display: block;width: 42px;height: 42px;background-repeat: no-repeat;background-size: 45px;background-position: center;}
+.doc-slider .owl-next::after {content: '';background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-width='1'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8 12h8m0 0l-3-3m3 3l-3 3'/%3E%3C/g%3E%3C/svg%3E");display: block;width: 42px;height: 42px;background-repeat: no-repeat;background-size: 45px;background-position: center;}
+.owl-prev span, .owl-next span {display: none;}.doc-slider .owl-nav {margin-top: 60px !important;text-align: right !important;}
+.w-photo:hover img {transform: scale(1.1);}.w-photo img {transition: .3s linear;}
+.owl-next:focus, .owl-prev:focus {outline: none !important;}.owl-theme .owl-nav [class*='owl-']:hover {background-color: #fff !important;}
+.docimg {overflow: hidden;border-radius: 20px;}
 
 
 @media (max-width:1694px){.imgdwn p{font-size:24px}.dep .img{height:480px}.imgdwn{padding:35px}.imgdwn img{width:55px}
