@@ -13,7 +13,7 @@ function Specialities(){
         <div  className='w-l-div'>
         <div className="w-feature-container">
       <div className="w-feature-card">
-        <span className="w-icon w-star-icon"></span> 
+        <span className="w-icon w-star-icon">★</span>
         <div>
           <h4 className="w-title">Asia’s Largest Integrated</h4>
           <p className="w-subtitle">Out-Patient Centre</p>
