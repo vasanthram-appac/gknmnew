@@ -281,7 +281,7 @@ function Dashboard(){
     return(
         <>
 <section className="pspace">
-<div className="container">
+<div className="w-container">
 <div className="grid2">
 <div className="about-col">
 
@@ -345,21 +345,38 @@ function Dashboard(){
 </div>
 </div>
 </section>
-<section className="pspace pb0 w-box">
-    <div className="container">
-    <div className="ctop">
-            <p>Center Of Excellence</p>
+
+<section className="pspace pt0 w-box">
+    <div className="w-container">
+      <div className="ctop">
             <div className="ctopa">
-                <h2 className="ch2">Expert care tailored to your unique procedural needs.</h2>
-                <div className="w-text-rt"><Link to="#" className="bbtn">See All Procedures</Link></div>
+                <div>
+                  <h2 className="ch2 mb2">Consult Tops Doctor Online <br />for any Health Concern</h2>
+                 <p className="para mb-0">Being one of the pioneers in the healthcare industry at coimbatore, our multispeciality <br />hospitals enables you to take treatment for your health complications.</p>
+                </div>
+                <div className="w-text-rt"><Link to="#" className="bbtn">View All Doctors</Link></div>
             </div>
-        </div>
-    </div>
-    </section>
+      </div>
+      <CarouselComponent/>
+      </div>
+   </section>
+
+
 
     {/* center of excellence */}
     <section className="pspace pt0">
-        <div className="container">
+        <div className="w-container">
+
+        <div className="w-box">
+        <div className="ctop">
+            <p>Center Of Excellence</p>
+            <div className="ctopa">
+                <h2 className="ch2 mb-0">Expert care tailored to your unique procedural needs.</h2>
+                <div className="w-text-rt"><Link to="#" className="bbtn">See All Procedures</Link></div>
+            </div>
+        </div>
+        </div>
+
         <div className="w-cdown">
             <div className="cd1">
             <div className="cd1a">
@@ -440,7 +457,7 @@ function Dashboard(){
 
 
     <section className="pspace pt0 w-box">
-    <div className="container">
+    <div className="w-container">
     <div className="ctop">
             <p>Allied Services</p>
             <div className="ctopa">
@@ -452,20 +469,31 @@ function Dashboard(){
     </div>
     </section>
 
-  <section className="pspace pt0 w-box">
-    <div className="container">
+
+    <section className="pspace pt0">
+    <div className="w-container">
       <div className="ctop">
             <div className="ctopa">
-                <div>
-                  <h2 className="ch2 mb2">Consult Tops Doctor Online <br />for any Health Concern</h2>
-                 <p className="para">Being one of the pioneers in the healthcare industry at coimbatore, our multispeciality <br />hospitals enables you to take treatment for your health complications.</p>
-                </div>
-                <div className="w-text-rt"><Link to="#" className="bbtn">View All Doctors</Link></div>
+                <h2 className="ch2">News &amp; Events</h2>
+                <div className="w-text-rt"><Link to="#" className="bbtn">All Allied Services</Link></div>
             </div>
       </div>
-      <CarouselComponent/>
-      </div>
-   </section>
+
+<div className="news-row">
+  <div className="upcoming-news">
+
+  </div>
+  <div className="latest-news">
+    <div className="today-news"></div>
+    <div className="today-news"></div>
+  </div>
+</div>
+
+
+    </div>
+    </section>
+
+
 
         </>
     )
