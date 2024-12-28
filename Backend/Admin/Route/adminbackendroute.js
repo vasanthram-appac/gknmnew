@@ -1,6 +1,6 @@
 var express = require('express');
 const { Login } = require('../Controller/Adminuser');
-const { getreport, addDoctor, updateDoctor } = require('../Controller/Doctor');  // Assuming updateDoctor is implemented
+const { getreport, addDoctor, updateDoctor, deleteDoctor, deleteDoctordetail } = require('../Controller/Doctor');  // Assuming updateDoctor is implemented
 
 var router = express.Router();
 
@@ -12,6 +12,9 @@ router.route('/doctor')
   .post(addDoctor);      
 
 router.route('/doctor/:id')  
-  .put(updateDoctor); 
+  .put(updateDoctor).delete(deleteDoctor);
+
+  router.route('/doctordetail/:id')  
+  .delete(deleteDoctordetail);
        
 module.exports = router;

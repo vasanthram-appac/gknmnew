@@ -16,68 +16,31 @@ const counterSchema = new mongoose.Schema({
 const Counter = mongoose.models.Counter || mongoose.model('Counter', counterSchema);
 
 // Schema for doctors
-const doctorschema = new mongoose.Schema({
+const doctordetailschema = new mongoose.Schema({
     id: {
         type: Number,
         unique: true,
         required: false,
         default: null,
     },
-    name: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 20,
+    dr_id: {
+        type: Number,
+        required: true,
+        default: 0,
+        
     },
-    qualification: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 255,
-    },
-    department: {
+    title: {
         type: String,
         required: false,
         default: null,
         maxlength: 255,
     },
-    image: {
+    content: {
         type: String,
         required: false,
         default: null,
-        maxlength: 255,
     },
-    new_op: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 100,
-    },
-    review_op: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 100,
-    },
-    experience: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 25,
-    },
-    expertise: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 255,
-    },
-    languages: {
-        type: String,
-        required: false,
-        default: null,
-        maxlength: 255,
-    },
-    status: {
+    titlestatus: {
         type: String,
         enum: ['Active', 'Inactive'],
         required: false,
@@ -94,11 +57,11 @@ const doctorschema = new mongoose.Schema({
 });
 
 // Middleware to automatically generate the `id` before saving the doctor document
-doctorschema.pre('save', async function (next) {
+doctordetailschema.pre('save', async function (next) {
     if (this.isNew) {
         try {
             const counter = await Counter.findOneAndUpdate(
-                { modelName: 'Doctor' },
+                { modelName: 'Doctordetail' },
                 { $inc: { currentValue: 1 } },
                 { new: true, upsert: true }
             );
@@ -113,6 +76,6 @@ doctorschema.pre('save', async function (next) {
 });
 
 // Check if the Doctor model is already registered
-const Doctormodel = mongoose.models.Doctors || mongoose.model('Doctors', doctorschema);
+const Doctordetailmodel = mongoose.models.Doctordetails || mongoose.model('Doctordetails', doctordetailschema);
 
-module.exports = Doctormodel;
+module.exports = Doctordetailmodel;
