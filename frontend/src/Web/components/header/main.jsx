@@ -3,6 +3,7 @@ import Footer from "./footer";
 import Home from "../Pages/home";
 import Specialities from "../Pages/specialities";
 import "../webstyle.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
