@@ -3,7 +3,7 @@ import React from 'react';
 
 function Specialities(){
    return(
-      <>
+      <section className='pspace'>
       <div  className='conatainer'>
         <div className="w-banner-container">
           <div className="w-rdiv">
@@ -39,7 +39,7 @@ function Specialities(){
         </div>
 
        </div>
-      </>
+       </section>
    )
 }
 
