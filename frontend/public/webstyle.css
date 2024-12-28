@@ -443,3 +443,14 @@ button:focus-visible {
 
 }
 @media (max-width:360px){.cd1,.cd2,.cd3,.cd4{padding:20px}.cbutton .button{font-size:13px;text-align:left;}}
+
+
+/* from surya  */
+.w-banner-container{
+  display: grid;
+  grid-template-columns: 50% 45%;
+  gap:5%;
+}
+
+.w-rdiv{border-radius: 35px;display:flex;overflow: hidden;}
+.w-rdiv img{width:100%;height: auto;}

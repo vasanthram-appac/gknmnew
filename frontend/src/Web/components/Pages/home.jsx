@@ -74,7 +74,7 @@ function Dashboard(){
 
                   <div className="allied-content">
                     <h2 className="htwo">
-                      Advanced Roboticsssss <br />
+                      Advanced Robotics <br />
                       <span>System</span>
                     </h2>
                     <div className="right-arrow-circle"></div>
