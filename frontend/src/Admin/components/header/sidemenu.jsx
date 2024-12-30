@@ -15,16 +15,16 @@ const Sidebar = () => {
   return (
     <div className="dash-sidebar">
       <ul className="menu">
-        <li className="menu-item">
+        {/* <li className="menu-item">
           <i className="fa fa-dashboard"></i> <Link to="/admin/dashboard" >Dashboard </Link>
-        </li>
+        </li> */}
         <li className="menu-item">
           <i className="fa fa-user"></i>   <Link to="/admin/doctor" >Doctor </Link>
         </li>
         <li className="menu-item" >
           <i className="fa fa-bar-chart"></i><Link to="/admin/specialities" >Specialities </Link>
         </li>
-        <li className="menu-item" >
+        {/* <li className="menu-item" >
           <i className="fa fa-bar-chart"></i><Link to="/admin/appointment" >Appointment Details</Link>
         </li>
         <li className="menu-item">
@@ -38,7 +38,7 @@ const Sidebar = () => {
         </li>
           <li className="menu-item">
           <i className="fa fa-cogs"></i><Link to="/admin/aseo">SEO</Link> 
-        </li>
+        </li> */}
       </ul>
     </div>
   );

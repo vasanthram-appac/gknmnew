@@ -34,7 +34,7 @@ exports.Login = async (req, res) => {
             );
 
             // Successful login
-            return res.status(200).json({ message: "Login successful!" });
+            return res.status(200).json({ message: "Login successful!", data:update });
         }
 
 

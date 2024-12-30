@@ -149,24 +149,24 @@ exports.addDoctor = [
 
         // Save the relative path of the image in the database
         newDoctor.image = `/images/doctor/${file.filename}`;
-      } 
+      }
 
       // Save the new doctor to the database
       const savedDoctor = await newDoctor.save();
 
-       // Handle dynamic fields
-       if (body.dynamicFields) {
+      // Handle dynamic fields
+      if (body.dynamicFields) {
         const dynamicFields = JSON.parse(body.dynamicFields);
         for (const field of dynamicFields) {
-            const newDetail = new Doctordetailmodel({
-                dr_id: savedDoctor.id,
-                title: field.title,
-                content: field.content,
-                titlestatus: field.titlestatus,
-            });
-            await newDetail.save();
+          const newDetail = new Doctordetailmodel({
+            dr_id: savedDoctor.id,
+            title: field.title,
+            content: field.content,
+            titlestatus: field.titlestatus,
+          });
+          await newDetail.save();
         }
-    }
+      }
 
 
       res.json({ msg: 'Doctor added successfully', data: savedDoctor });
@@ -178,7 +178,7 @@ exports.addDoctor = [
 ];
 
 exports.updateDoctor = [
-  upload.single('image'),  
+  upload.single('image'),
   validateDoctor,
   async (req, res) => {
     const errors = validationResult(req);
@@ -186,7 +186,7 @@ exports.updateDoctor = [
       const errorMessages = errors.array().map((err) => err.msg);
       return res.status(400).json({ errors: errorMessages });
     }
-   
+
     try {
       const { body, file } = req;
       const { id } = req.params;
@@ -238,22 +238,22 @@ exports.updateDoctor = [
         const dynamicFields = JSON.parse(body.dynamicFields);
         for (const field of dynamicFields) {
           const doctordetails = await Doctordetailmodel.findOne({ id: field.editid });
-      
+
           if (doctordetails) {
-           
+
             doctordetails.title = field.title;
             doctordetails.content = field.content;
             doctordetails.titlestatus = field.titlestatus;
-     
+
             await doctordetails.save();
-          } else{
+          } else {
             const newDetail = new Doctordetailmodel({
               dr_id: updatedDoctor.id,
               title: field.title,
               content: field.content,
               titlestatus: field.titlestatus,
-          });
-          await newDetail.save();
+            });
+            await newDetail.save();
           }
         }
       }
@@ -271,13 +271,13 @@ exports.deleteDoctor = async (req, res) => {
 
   try {
     // Find and delete the doctor by ID
-    const doctor = await Doctormodel.findOneAndDelete({id : id});
+    const doctor = await Doctormodel.findOneAndDelete({ id: id });
 
     if (!doctor) {
       return res.status(404).json({ msg: 'Doctor not found' });
     }
 
-    res.json({ msg: 'Doctor deleted successfully' , data: doctor});
+    res.json({ msg: 'Doctor deleted successfully', data: doctor });
   } catch (err) {
     console.error('Error deleting doctor:', err);
     res.status(500).json({ msg: 'Error deleting doctor', error: err.message });
@@ -290,13 +290,13 @@ exports.deleteDoctordetail = async (req, res) => {
 
   try {
     // Find and delete the doctor by ID
-    const doctor = await Doctordetailmodel.findOneAndDelete({id : id});
+    const doctor = await Doctordetailmodel.findOneAndDelete({ id: id });
 
     if (!doctor) {
       return res.status(404).json({ msg: 'Doctor detail not found' });
     }
 
-    res.json({ msg: 'Doctor detail deleted successfully' , data: doctor});
+    res.json({ msg: 'Doctor detail deleted successfully', data: doctor });
   } catch (err) {
     console.error('Error deleting doctor:', err);
     res.status(500).json({ msg: 'Error deleting doctor', error: err.message });
