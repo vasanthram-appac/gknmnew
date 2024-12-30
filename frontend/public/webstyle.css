@@ -475,8 +475,8 @@ button:focus-visible {
 .w-y-con .w-bp{font-weight:600;font-size:20px;color:#000;margin: 0px 0px 8px 0px;}
 .w-y-con p{font-weight:400;font-size:18px;}
 .bnr-wrp .swiper-pagination{text-align: end;position: absolute;padding:0px 8%}
-.bnr-wrp .swiper-pagination-bullet{width:10px;height:10px;border-radius: 50%;background:#8f8f8f !important;transition: 0.3s linear;}
-.bnr-wrp .swiper-pagination-bullet.swiper-pagination-bullet-active{background:#dedede  !important;width:20px;height:10px;border-radius: 5px;}
+.bnr-wrp .swiper-pagination-bullet{width:10px;height:10px;border-radius: 50%;background:#8f8f8f !important;transition: 0.3s linear;opacity:1;}
+.bnr-wrp .swiper-pagination-bullet-active{background:#dedede  !important;width:20px;height:10px;border-radius: 5px;opacity:1;}
 .iop-wrp{    width: 33%;
   left: 5%;
   display: grid
@@ -568,7 +568,7 @@ button:focus-visible {
 }
 
 @media(max-width:1250px){
-  .iop-wrp{display:flex;gap:20px;width: auto;flex-direction: column;}
+  .iop-wrp{gap:20px;width: auto;flex-direction: column;}
   .banner-heading-d p {
     font-size: 20px;
 }
@@ -607,22 +607,25 @@ button:focus-visible {
   font-size: 35px;
   line-height: 31px;}
   .w-feature-container ,.w-years-wrp.d-flex{display: none !important;}
-  .w-l-div.d-flex.justify-content-between.flex-column{justify-content: center !important;}
+  .w-l-div.d-flex.justify-content-start.flex-column{justify-content: center !important;}
   .w-banner-container {
     grid-template-columns: 57% 38%;}
   
 }
 @media(max-width:992px){
-  .iop-d ,.w-l-div.d-flex.justify-content-between.flex-column ,.banner-heading-d{display: none !important;}
+  .iop-d ,.w-l-div.d-flex.justify-content-start.flex-column ,.banner-heading-d{display: none !important;}
   .banner-heading-d.two{display: block !important;}
   
-  .iop-wrp {padding:20px 20px 0px 20px;bottom:0px;}
+  .iop-wrp {padding:20px 20px 0px 20px;bottom:0px;grid-template-columns: 100%;}
   .w-banner-container {grid-template-columns:100%;}
   .banner-heading-d p {
     font-size: 18px;
 }
+.bnr-wrp .swiper{overflow: visible;}
+.bnr-wrp .swiper-pagination{bottom: -30px !important;}
 .w-rdiv{height: 400px;}
 .bnr-wrp{height:400px;}
+
 }
 
 @media (max-width: 767px) {
@@ -635,6 +638,11 @@ button:focus-visible {
 }
 
 @media (max-width: 480px) {
+  .iop-wrp {
+    padding: 20px 20px 0px 0px;}
+    .iop-wrp  .bbtn {
+      padding: 8px 25px;
+  }
   .iop-wrp {bottom:0px;}
   .w-rdiv{height: 300px;}
 .bnr-wrp{height:300px;}
