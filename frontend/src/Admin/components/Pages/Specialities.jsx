@@ -220,18 +220,13 @@ const CombinedComponent = () => {
           <div className="rpt-wrp">
             <div className="report-sts">
               <div className="w-table-cwrp">
-                <div
-                  className=""
-                  style={{ float: "right", position: "relative", zIndex: 1 }}
-                >
-                  <button onClick={handleAddSpecialities}>Add Specialities</button>
-                </div>
+              <div className="d-flex  justify-content-between gap-3 flex-wrap mb-3">
+               
 
                 {/* Search Box */}
-                <div className="search-box">
+                <div className="search-boxdiv">
                   <div className="search">
                     <form>
-                      <label>Search:</label>
                       <input
                         type="text"
                         className="search-box"
@@ -242,6 +237,14 @@ const CombinedComponent = () => {
                     </form>
                   </div>
                 </div>
+                <div
+                  className=""
+                  style={{ float: "right", position: "relative", zIndex: 1 }}
+                >
+                  <button className="d-btntyp1" onClick={handleAddSpecialities}>Add Specialities</button>
+                </div>
+                </div>
+
 
                 <div style={{ height: 400, width: "100%" }}>
                   <DataGrid
@@ -260,9 +263,9 @@ const CombinedComponent = () => {
               </div>
 
               {/* Export Buttons */}
-              <div className="export-buttons">
-                <button onClick={handleExportExcel}>Export to Excel</button>
-                <button onClick={handleExportPDF}>Export to PDF</button>
+              <div className="d-export-buttons">
+                <button className="d-btntyp1" onClick={handleExportExcel}>Export to Excel</button>
+                <button className="d-btntyp2" onClick={handleExportPDF}>Export to PDF</button>
               </div>
             </div>
           </div>
@@ -277,11 +280,11 @@ const CombinedComponent = () => {
       >
         <h2>{newGknm.id ? "Edit Specialities" : "Add Specialities"}</h2>
         <form onSubmit={handleFormSubmit} id="specialitiesForm" encType="multipart/form-data">
-          <div className="row">
+        <div className="row  form-input-wrp">
             {/* Input Fields */}
-            <div className="col-lg-6">
+            <div className="form-div">
               <label>
-                Title:
+                Title:</label>
                 <input
                   type="text"
                   name="title"
@@ -290,11 +293,11 @@ const CombinedComponent = () => {
                     setNewGknm({ ...newGknm, title: e.target.value })
                   }
                 />
-              </label>
+        
             </div>
-            <div className="col-lg-6">
+            <div className="form-div">
               <label>
-                Sub Title:
+                Sub Title:</label>
                 <input
                   type="text"
                   name="subtitle"
@@ -303,12 +306,12 @@ const CombinedComponent = () => {
                     setNewGknm({ ...newGknm, subtitle: e.target.value })
                   }
                 />
-              </label>
+         
             </div>
          
-            <div className="col-lg-6">
+            <div className="form-div">
               <label>
-                Image:
+                Image:</label>
                 <input
                   type="file"
                   name="image"
@@ -317,12 +320,11 @@ const CombinedComponent = () => {
                   }
                   accept="image/webp"
                 />
-              </label>
             </div>
 
-            <div className="col-lg-12">
+            <div className="form-div">
               <label>
-                Status:
+                Status:</label>
                 <select
                   value={newGknm.status}
                   onChange={(e) =>
@@ -332,11 +334,10 @@ const CombinedComponent = () => {
                   <option value="Active">Active</option>
                   <option value="Inactive">Inactive</option>
                 </select>
-              </label>
             </div>
-            <div className="col-lg-12">
-              <button type="submit">{newGknm.id ? "Update" : "Add"}</button>
-              <button type="button" onClick={handleCloseModal}>
+            <div className="col-lg-12 model-button-wrp">
+              <button  className="d-mbtntyp-1"  type="submit">{newGknm.id ? "Update" : "Add"}</button>
+              <button  className="d-mbtntyp-2" type="button" onClick={handleCloseModal}>
                 Close
               </button>
             </div>
