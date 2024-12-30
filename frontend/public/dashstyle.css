@@ -387,6 +387,7 @@ label {
 .ReactModal__Content.ReactModal__Content--after-open {
   width: 60%;
   min-width: 60%;
+  height:fit-content;
   margin: auto;
   top: 150px;
 }
