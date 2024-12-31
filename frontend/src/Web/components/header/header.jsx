@@ -19,26 +19,26 @@ function header() {
   <div className="box">
     <header>
       <div className="hu">
-        <div className="hu1">
-          <div className="hp">
+        <ul className="hu1">
+          <li className="hp">
             <p> Health Packages </p>
             <img src="images/cimages/down-arrow.svg" alt="" />
-          </div>
-          <div className="pl">
+          </li>
+          <li className="pl">
             <p> Patient Login</p>
             <img src={rightArrowCircle} alt="" />
-          </div>
-        </div>
-        <div className="hu2">
-          <div className="eh">
+          </li>
+        </ul>
+        <ul className="hu2">
+          <li className="eh">
           <img src={plus} alt="" />
             <p> Emergency Helpline</p>
-          </div>
-          <div className="cl">
+          </li>
+          <li className="cl">
             <img src={mobileCall} alt="" />
             <p> 0420 4316677</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div className="hd">
         <div className="hd1">
@@ -157,8 +157,14 @@ function header() {
           </li>
           <li className="hd3">
           <ul className="hd3-flex">
-            <li className="hd3a dflex">
-          <img src={search} alt="" />
+            <li className=" dflex">
+             <input type="text" className='search-div' >
+
+
+             <img src={search} alt="" />
+             </input>
+             
+         
             </li>
 
             <li className="hd3b">
