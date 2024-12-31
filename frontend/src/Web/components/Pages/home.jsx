@@ -4,24 +4,16 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import 'magnific-popup';
 import 'magnific-popup/dist/magnific-popup.css';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Scrollbar} from 'swiper';  // Correct import for Swiper modules
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Correct CSS import
-
+// import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+// import { Scrollbar} from 'swiper';  // Correct import for Swiper modules
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-
-
-
-import stateOf from '../../../../public/images/cimages/state-of-art.jpg';
-import hospitalBed from '../../../../public/images/cimages/hospital-bed.svg';
-import cancer from '../../../../public/images/cimages/cancer.png';
-import lungs from '../../../../public/images/cimages/lungs.png';
-import skin from '../../../../public/images/cimages/skin.png';
-import roboticArm from '../../../../public/images/cimages/robotic-arm.png';
-
+// import MySwiperbanner from './banner-slider';
+import { CarouselComponent , OnlineAccessPortal, Testimonials, VlogCarousel} from './home-page-sliders';
+import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper} from './banner-slider';
 
 
 
@@ -42,246 +34,19 @@ function Dashboard(){
       }, []);
   //magnific popup ends
 
-  //services starts
-      const MySwiperComponent = () => {
-        return (
-          <div>
-            <Swiper
-//  modules={[Scrollbar]}
-              spaceBetween={25}
-              slidesPerView={4} // Adjust this value based on your layout
-              scrollbar={{ draggable: false }} // Enable scrollbar
-              loop={true} // Enable looping
-              autoplay={{
-                  delay: 3000, // Delay between slides in milliseconds
-                       disableOnInteraction: false, // Keep autoplay running even after user interaction
-              }}
-              breakpoints={{
-                320: { slidesPerView: 1, spaceBetween: 10 }, // Small screens
-                580: { slidesPerView: 2, spaceBetween: 15 }, // Medium screens
-                992: { slidesPerView: 3, spaceBetween: 20 }, // Tablets
-                1500: { slidesPerView: 4, spaceBetween: 25 }, // Desktops
-              }}
-            >
-
-
-              {/* Slide 2 */}
-              <SwiperSlide>
-                <div className="item">
-                  <div className="alimg">
-                    <img src="images/cimages/all-allied-services.png" alt="Allied Services" loading="lazy" />
-                  </div>
-
-                  <div className="allied-content">
-                    <h2 className="htwo">
-                      Advanced Robotics <br />
-                      <span>System</span>
-                    </h2>
-                    <div className="right-arrow-circle"></div>
-                  </div>
-
-                  <div className="overlay"></div>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 3 */}
-              <SwiperSlide>
-                <div className="item">
-                  <div className="alimg">
-                    <img src="images/cimages/all-allied-services.png" alt="Allied Services" loading="lazy" />
-                  </div>
-
-                  <div className="allied-content">
-                    <h2 className="htwo"> Home Healthcare <br /> <span>Services</span>
-                    </h2>
-                    <div className="right-arrow-circle"></div>
-                  </div>
-
-                  <div className="overlay"></div>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 4 */}
-              <SwiperSlide>
-                <div className="item">
-                  <div className="alimg">
-                    <img src="images/cimages/all-allied-services.png" alt="Allied Services" loading="lazy" />
-                  </div>
-
-                  <div className="allied-content">
-                    <h2 className="htwo">
-                      Diabetic Foot <br />
-                      <span>Clinic</span>
-                    </h2>
-                    <div className="right-arrow-circle"></div>
-                  </div>
-
-                  <div className="overlay"></div>
-                </div>
-              </SwiperSlide>
-
-               {/* Slide 5 */}
-               <SwiperSlide>
-                <div className="item">
-                  <div className="alimg">
-                    <img src="images/cimages/all-allied-services.png" alt="Allied Services" loading="lazy" />
-                  </div>
-
-                  <div className="allied-content">
-                    <h2 className="htwo">
-                      Heart Failure <br />
-                      <span>Clinic</span>
-                    </h2>
-                    <div className="right-arrow-circle"></div>
-                  </div>
-
-                  <div className="overlay"></div>
-                </div>
-              </SwiperSlide>
-
-               {/* Slide 6 */}
-               <SwiperSlide>
-                <div className="item">
-                  <div className="alimg">
-                    <img src="images/cimages/all-allied-services.png" alt="Allied Services" loading="lazy" />
-                  </div>
-
-                  <div className="allied-content">
-                    <h2 className="htwo">
-                      Advanced Robotic <br />
-                      <span>System</span>
-                    </h2>
-                    <div className="right-arrow-circle"></div>
-                  </div>
-
-                  <div className="overlay"></div>
-                </div>
-              </SwiperSlide>
-
-            </Swiper>
-
-            {/* Optional: Add Scrollbar if required */}
-            {/* <div className="swiper-scrollbar"></div> */}
-          </div>
-        );
-      };
-
-    //   export default MySwiperComponent;
-
-    MySwiperComponent ();
-//services starts
-
-
-
-//Doctors starts
-    const CarouselComponent = () => {
-      const options = {
-        margin: 20,
-        duration: 2000,
-        speed: 1000,
-        responsiveClass: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        loop: true,
-        nav: true,
-        dots: false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-       },
-        responsive: {
-          0: { items: 1 },
-          450: { items: 2 },
-          700: { items: 3 },
-          980: { items: 4 },
-          1200: { items: 5 },
-          1680: { items: 6 },
-        },
-      };
-      return (
-        <div>
-          {/* Carousel Section */}
-          <OwlCarousel className="owl-theme doc-slider" {...options}>
-            <div className="w-photo">
-              <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-            <div className="w-photo">
-            <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="Jenny Andersen" /></div>
-              <div className="doc-cnt">
-              <h3>Jenny Andersen</h3>
-              <p>MBBS, DA, DNB, IDCCM</p>
-              </div>
-            </div>
-          </OwlCarousel>
-        </div>
-      );
-    }
-      CarouselComponent ();
-
-//services ends
-
-
-
-
-
     return(
         <>
+
+        <section className="pspace pt0">
+          <div className="w-container">
+          <MySwiperbanner />
+          </div>
+        </section>
+
+
 <section className="pspace">
 <div className="w-container">
+
 <div className="grid2">
 <div className="about-col">
 
@@ -294,7 +59,7 @@ function Dashboard(){
 <div className="statistics-row">
 <div className="statistics">
 <div className="stat-img">
-    <img src={hospitalBed} alt="Hospital Bed" />
+    <img src="images/cimages/hospital-bed.svg" alt="Hospital Bed" />
 </div>
 <div>
 <p className="fbold count plus" data-count="43">43</p>
@@ -303,7 +68,7 @@ function Dashboard(){
 </div>
 
 <div className="statistics">
-<div className="stat-img"><img src={hospitalBed} alt="Hospital Bed" /></div>
+<div className="stat-img"><img src="images/cimages/hospital-bed.svg" alt="Hospital Bed" /></div>
 <div>
 <p className="fbold count plus" data-count="600">600</p>
 <p>Patient Beds</p>
@@ -311,7 +76,7 @@ function Dashboard(){
 </div>
 
 <div className="statistics">
-<div className="stat-img"><img src={hospitalBed} alt="Hospital Bed" /></div>
+<div className="stat-img"><img src="images/cimages/hospital-bed.svg" alt="Hospital Bed" /></div>
 <div>
 <p className="fbold count plus" data-count="70">70</p>
 <p>Years of Experience</p>
@@ -319,7 +84,7 @@ function Dashboard(){
 </div>
 
 <div className="statistics">
-<div className="stat-img"><img src={hospitalBed} alt="Hospital Bed" /></div>
+<div className="stat-img"><img src="images/cimages/hospital-bed.svg" alt="Hospital Bed" /></div>
 <div>
 <p className="fbold count plus" data-count="43">20</p>
 <p>Departments</p>
@@ -332,7 +97,7 @@ function Dashboard(){
 <div>
 <div className='h100'>
 <Link className="vlink popup-youtube playBut stretched-link" to="https://www.youtube.com/watch?v=dOM6qiqJJ3M">
-<img src={stateOf} alt="GKNMH Centre" />
+<img src="images/cimages/state-of-art.jpg" alt="GKNMH Centre" />
                            <div className="button is-play">
                            <div className="button-icon">
                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" d="M7 6v12l10-6z"></path></svg>
@@ -344,6 +109,24 @@ function Dashboard(){
 
 </div>
 </div>
+</section>
+
+
+<section className="pspace pt0">
+    <div className="w-container">
+      <div className="w-box">
+        <div className="ctop">
+            <p>Explore Our Specialities</p>
+            <div className="ctopa">
+                <h2 className="ch2 mb-0">Personalized expert care designed to meet your unique health needs.</h2>
+                <div className="w-text-rt"><Link to="#" className="bbtn">See All Specialities</Link></div>
+            </div>
+        </div>
+
+        <DoubleRowSwiper />
+
+      </div>
+    </div>
 </section>
 
 <section className="pspace pt0 w-box">
@@ -360,8 +143,6 @@ function Dashboard(){
       <CarouselComponent/>
       </div>
    </section>
-
-
 
     {/* center of excellence */}
     <section className="pspace pt0">
@@ -392,7 +173,7 @@ function Dashboard(){
             </div>
 
             <div className="cd1b">
-                <img src={cancer} alt=""/>
+                <img src="images/cimages/cancer.png" alt=""/>
             </div>
             </div>
 
@@ -410,7 +191,7 @@ function Dashboard(){
                 </div>
 
                 <div className="cd1b">
-                    <img src={lungs} alt=""/>
+                    <img src="images/cimages/lungs.png" alt=""/>
                 </div>
                 </div>
                 <div className="cd3 cd1">
@@ -428,7 +209,7 @@ function Dashboard(){
                     </div>
 
                     <div className="cd1b">
-                        <img src={skin} alt=""/>
+                        <img src="images/cimages/skin.png" alt=""/>
                     </div>
                     </div>
                     <div className="cd4 cd1">
@@ -445,8 +226,7 @@ function Dashboard(){
                         </div>
 
                         <div className="cd1b">
-
-                            <img src={roboticArm} alt=""/>
+                            <img src="images/cimages/robotic-arm.png" alt=""/>
                         </div>
                         </div>
 
@@ -465,27 +245,110 @@ function Dashboard(){
                 <div className="w-text-rt"><Link to="#" className="bbtn">All Allied Services</Link></div>
             </div>
         </div>
+
         <MySwiperComponent/>
+
     </div>
     </section>
 
 
     <section className="pspace pt0">
     <div className="w-container">
-      <div className="ctop">
+      <div className="ctop w-box">
             <div className="ctopa">
                 <h2 className="ch2">News &amp; Events</h2>
-                <div className="w-text-rt"><Link to="#" className="bbtn">All Allied Services</Link></div>
+                <div className="w-text-rt"><Link to="#" className="bbtn">View All News &amp; Events</Link></div>
             </div>
       </div>
 
 <div className="news-row">
   <div className="upcoming-news">
+<div className="upnews-col">
+  <h3 className="ch3 mb-4">Upcoming Events</h3>
+  <ul className="upnews-tabs mb-5">
+    <li><Link to="#" className="active">CME</Link></li>
+    <li><Link to="#">OPD</Link></li>
+    <li><Link to="#">Webinar</Link></li>
+  </ul>
+  <div className="upnews-content">
+  <div className="upnews-column">
+    <div className="upnews-month">
+      <p className="upnumber">10</p>
+      <p className="upmonth mb-0">DEC</p>
+    </div>
+    <div>
+      <h4 className="ch4">CME program Hosted in Karur</h4>
+      <Link to="#" className="news-btn">View Details</Link>
+    </div>
+  </div>
 
+  <div className="upnews-column">
+    <div className="upnews-month">
+      <p className="upnumber">21</p>
+      <p className="upmonth mb-0">NOV</p>
+    </div>
+    <div>
+      <h4 className="ch4">Medical Thoracoscopy programme at GKNM hospital</h4>
+      <Link to="#" className="news-btn">View Details</Link>
+    </div>
+  </div>
+
+  <div className="upnews-column">
+    <div className="upnews-month">
+      <p className="upnumber">26</p>
+      <p className="upmonth mb-0">JAN</p>
+    </div>
+    <div>
+      <h4 className="ch4">Medical Oncology in Tamilnadu, led by Dr.Shantanu Singh,</h4>
+      <Link to="#" className="news-btn">View Details</Link>
+    </div>
+  </div>
+  </div>
+</div>
   </div>
   <div className="latest-news">
-    <div className="today-news"></div>
-    <div className="today-news"></div>
+    <div className="today-news">
+      <div className="event-col">
+        <div className="event-img"><img src="images/cimages/ca-prostate3.webp" alt="" /></div>
+        <div className="event-content">
+          <p className="event-date">October 19, 2024</p>
+          <h2 className="ch3 mb-3">State-of-the-art diagnostic and imaging services</h2>
+          <p>The CME Program on CA Prostate was a roaring success. Thank you so much for patiently attending the event and learning more from the experts. From power-packed speeches to exciting round table discussions – the event was fun-filled and informative. Thank You for making this event a great success.</p>
+        </div>
+      </div>
+    </div>
+    <div className="">
+    <div className="old-news">
+
+       <div className="oldnews-column">
+        <div className="oldnews-img"><img src="images/cimages/ca-prostate3.webp" alt="" /></div>
+        <div className="event-cnt">
+          <p className="event-date mt-0">October 19, 2024</p>
+          <h2 className="ch4 mb-2">State-of-the-art diagnostic and imaging services</h2>
+        </div>
+       </div>
+
+       <div className="oldnews-column">
+        <div className="oldnews-img"><img src="images/cimages/ca-prostate3.webp" alt="" /></div>
+        <div className="event-cnt">
+          <p className="event-date mt-0">October 19, 2024</p>
+          <h2 className="ch4 mb-2">State-of-the-art diagnostic and imaging services</h2>
+        </div>
+       </div>
+
+       <div className="oldnews-column">
+        <div className="oldnews-img"><img src="images/cimages/ca-prostate3.webp" alt="" /></div>
+        <div className="event-cnt">
+          <p className="event-date mt-0">October 19, 2024</p>
+          <h2 className="ch4 mb-2">State-of-the-art diagnostic and imaging services</h2>
+        </div>
+       </div>
+
+
+
+
+    </div>
+    </div>
   </div>
 </div>
 
@@ -493,6 +356,125 @@ function Dashboard(){
     </div>
     </section>
 
+    <section className="pspace pt0">
+		    <div className="w-container">
+        <div className="ctop w-box">
+            <div className="ctopa">
+                <h2 className="ch2">Doctor Vlogs</h2>
+                <div className="w-text-rt"><Link to="#" className="bbtn">View All Stories</Link></div>
+            </div>
+      </div>
+
+      <div className="w-vlog">
+            <div className="w-vlog1">
+                <div className="w-vlog1a w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link> <img src="images/cimages/v1.png" alt="" /><div className="w-ycntnt">
+                    <h4> Kidney Transplant, Nephrology/Urology</h4>
+                    <p>Mr.Radhakrishnan</p></div> </div>
+                    <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="white" d="M7 6v12l10-6z"></path>
+                 </svg>
+              </div>
+
+             </div>
+                <div className="w-vlog1b w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" /><div className="w-ycntnt">
+                    <h4> Kidney Transplant, Nephrology/Urology</h4>
+                    <p>Mr.Radhakrishnan</p></div> </div>
+                    <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="white" d="M7 6v12l10-6z"></path>
+                     </svg>
+                 </div>
+
+            </div>
+        </div>
+            <div className="w-vlog2">
+                <div className="w-vlog2a">
+                    <div className="w-vlog1400 w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" /><div className="w-ycntnt">
+                        <h4> Kidney Transplant, Nephrology/Urology</h4>
+                        <p>Mr.Radhakrishnan</p></div> </div>
+                    <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="white" d="M7 6v12l10-6z"></path>
+                 </svg>
+                </div>
+
+                </div>
+                    <div className="w-vlog2a1 w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" /><div className="w-ycntnt">
+                        <h4> Kidney Transplant, Nephrology/Urology</h4>
+                        <p>Mr.Radhakrishnan</p></div> </div>
+                        <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="white" d="M7 6v12l10-6z"></path>
+                         </svg>
+                            </div>
+                    </div>
+                    <div className="w-vlog2a2 w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" /><div className="w-ycntnt">
+                        <h4> Kidney Transplant, Nephrology/Urology</h4>
+                        <p>Mr.Radhakrishnan</p></div> </div>
+                    <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="white" d="M7 6v12l10-6z"></path>
+                 </svg>
+                    </div>
+
+                </div>
+                    </div>
+                <div className="w-vlog2b">
+                    <div className="w-vlog1400 w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" />
+                        <div className="w-ycntnt">
+                        <h4> Kidney Transplant, Nephrology/Urology</h4>
+                        <p>Mr.Radhakrishnan</p></div> </div>
+                        <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="white" d="M7 6v12l10-6z"></path>
+                         </svg>
+                            </div>
+                    </div>
+                    <div className="w-vlog2b1 w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" />
+                        <div className="w-ycntnt">
+                        <h4> Kidney Transplant, Nephrology/Urology</h4>
+                        <p>Mr.Radhakrishnan</p></div> </div>
+                        <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="white" d="M7 6v12l10-6z"></path>
+                         </svg>
+                            </div>
+
+                    </div>
+                    <div className="w-vlog2b2 w-pb"><div className="w-yprnt"> <Link to="home" className="w-streched-link"></Link><img src="images/cimages/v1.png" alt="" />
+                        <div className="w-ycntnt">
+                        <h4> Kidney Transplant, Nephrology/Urology</h4>
+                        <p>Mr.Radhakrishnan</p></div> </div>
+                        <div className="w-pba"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="white" d="M7 6v12l10-6z"></path>
+                         </svg>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <VlogCarousel />
+
+            </div>
+
+		    </div>
+		 </section>
+
+    <section className="pspace pt0">
+		    <div className="w-container">
+        <div className="ctop w-box">
+            <div className="ctopa">
+                <h2 className="ch2">Testimonials</h2>
+                <div className="w-text-rt"><Link to="#" className="bbtn">View All</Link></div>
+            </div>
+      </div>
+      <Testimonials />
+		    </div>
+		 </section>
+
+
+
+<section className="pspace pt0">
+  <div className="w-container">
+<OnlineAccessPortal />
+  </div>
+</section>
 
 
         </>
