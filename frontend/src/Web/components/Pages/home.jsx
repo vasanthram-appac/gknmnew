@@ -57,7 +57,7 @@ function Dashboard(){
         </section>
 
 
-<section className="pspace">
+<section className="pspace pt0">
 <div className="w-container">
 
 <div className="grid2">
@@ -254,7 +254,7 @@ function Dashboard(){
     <div className="ctop">
             <p>Allied Services</p>
             <div className="ctopa">
-                <h2 className="ch2">Transformative Treatments and Advanced Surgical Care</h2>
+                <h2 className="ch2 mb-0">Transformative Treatments and Advanced Surgical Care</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">All Allied Services</Link></div>
             </div>
         </div>
@@ -301,7 +301,7 @@ function Dashboard(){
     <div className="w-container">
       <div className="ctop w-box">
             <div className="ctopa">
-                <h2 className="ch2">News &amp; Events</h2>
+                <h2 className="ch2 mb-0">News &amp; Events</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">View All News &amp; Events</Link></div>
             </div>
       </div>
@@ -405,7 +405,7 @@ function Dashboard(){
 		    <div className="w-container">
         <div className="ctop w-box">
             <div className="ctopa">
-                <h2 className="ch2">Doctor Vlogs</h2>
+                <h2 className="ch2 mb-0">Doctor Vlogs</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">View All Stories</Link></div>
             </div>
       </div>
@@ -505,7 +505,7 @@ function Dashboard(){
 		    <div className="w-container">
         <div className="ctop w-box">
             <div className="ctopa">
-                <h2 className="ch2">Testimonials</h2>
+                <h2 className="ch2 mb-0">Testimonials</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">View All</Link></div>
             </div>
       </div>
