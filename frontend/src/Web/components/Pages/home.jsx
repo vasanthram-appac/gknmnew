@@ -1,5 +1,5 @@
 
-import React  ,{useState,useEffect}from 'react';
+import React  ,{useEffect}from 'react';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import 'magnific-popup';
@@ -13,7 +13,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 // import MySwiperbanner from './banner-slider';
 import { CarouselComponent , OnlineAccessPortal, Testimonials, VlogCarousel} from './home-page-sliders';
-import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper, DoubleRowSwiper2} from './banner-slider';
+import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper} from './banner-slider';
 
 
 
@@ -32,19 +32,6 @@ function Dashboard(){
           $('.popup-youtube').off('click.magnificPopup');
         };
       }, []);
-
-      const [currentIndex, setCurrentIndex] = useState(0);
-      const totalImages = 10;
-    
-      useEffect(() => {
-        // Timer to update the index every 500ms
-        const interval = setInterval(() => {
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
-        }, 500);
-    
-        // Clear interval on component unmount
-        return () => clearInterval(interval);
-      }, [totalImages]);
   //magnific popup ends
 
     return(
@@ -57,7 +44,7 @@ function Dashboard(){
         </section>
 
 
-<section className="pspace pt0">
+<section className="pspace">
 <div className="w-container">
 
 <div className="grid2">
@@ -127,7 +114,7 @@ function Dashboard(){
 
 <section className="pspace pt0">
     <div className="w-container">
-      <div className="w-box  spec">
+      <div className="w-box">
         <div className="ctop">
             <p>Explore Our Specialities</p>
             <div className="ctopa">
@@ -136,7 +123,7 @@ function Dashboard(){
             </div>
         </div>
 
-        <DoubleRowSwiper2 />
+        <DoubleRowSwiper />
 
       </div>
     </div>
@@ -250,11 +237,11 @@ function Dashboard(){
 
 
     <section className="pspace pt0 w-box">
-    <div className="w-container allied w-box spec">
+    <div className="w-container">
     <div className="ctop">
             <p>Allied Services</p>
             <div className="ctopa">
-                <h2 className="ch2 mb-0">Transformative Treatments and Advanced Surgical Care</h2>
+                <h2 className="ch2">Transformative Treatments and Advanced Surgical Care</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">All Allied Services</Link></div>
             </div>
         </div>
@@ -264,44 +251,12 @@ function Dashboard(){
     </div>
     </section>
 
-       <section>
-      <div className="w-boundaries">
-        <div className="w-world">
-          {/* Text Block */}
-          <div className="w-world1">
-            <div className="w-ctop">
-              <p>Center Of Excellence</p>
-              <div className="w-ctopa">
-                <h2>Compassionate care beyond borders for our international patients.</h2>
-                <button>Equip Now</button>
-              </div>
-            </div>
-          </div>
-          {/* Image Grid */}
-          <div className="w-world2">
-            {Array.from({ length: totalImages }).map((_, index) => (
-              <div
-                className={`w-pimg w-pimg${index + 1} ${
-                  index === currentIndex ? "visible" : ""
-                }`}
-                key={index}
-              >
-                <img
-                  src="images/cimages/profile-image.png"
-                  alt={`Profile image ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section className="pspace pt0">
     <div className="w-container">
       <div className="ctop w-box">
             <div className="ctopa">
-                <h2 className="ch2 mb-0">News &amp; Events</h2>
+                <h2 className="ch2">News &amp; Events</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">View All News &amp; Events</Link></div>
             </div>
       </div>
@@ -405,7 +360,7 @@ function Dashboard(){
 		    <div className="w-container">
         <div className="ctop w-box">
             <div className="ctopa">
-                <h2 className="ch2 mb-0">Doctor Vlogs</h2>
+                <h2 className="ch2">Doctor Vlogs</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">View All Stories</Link></div>
             </div>
       </div>
@@ -505,7 +460,7 @@ function Dashboard(){
 		    <div className="w-container">
         <div className="ctop w-box">
             <div className="ctopa">
-                <h2 className="ch2 mb-0">Testimonials</h2>
+                <h2 className="ch2">Testimonials</h2>
                 <div className="w-text-rt"><Link to="#" className="bbtn">View All</Link></div>
             </div>
       </div>
