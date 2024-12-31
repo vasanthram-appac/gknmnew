@@ -1554,10 +1554,6 @@ const DoubleRowSwiper = () => {
               <p>Brain & Nervous System</p>
             </div>
           </SwiperSlide>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6d46a1bcd1de131623baf4fa1c98ef1317d86263
           <SwiperSlide>
             <div className="w-spa">
               <svg
@@ -1943,7 +1939,6 @@ const MySwiperbanner = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -1998,13 +1993,6 @@ const MySwiperbanner = () => {
                     </div>
                   </div>
                 </div>
-=======
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <div className="w-banner-container">
-                <div className="w-rdiv w-rdiv2"></div>
->>>>>>> 6d46a1bcd1de131623baf4fa1c98ef1317d86263
 
                 <div className="banner-heading-d">
                   <h1 className="ban-hed">
@@ -2017,7 +2005,6 @@ const MySwiperbanner = () => {
                   </a>
                 </div>
 
-<<<<<<< HEAD
                 <div className="w-years-wrp  d-flex gap-3 align-items-center">
                   <img src="/images/cimages/72years.png" alt="" />
                   <div className="w-y-con">
@@ -2025,195 +2012,10 @@ const MySwiperbanner = () => {
                       Celebrating 72+<br></br> years of quality care
                     </p>
                     <p className="">Since 1952</p>
-=======
-                  <div className="banner-heading-d">
-                    <h1 className="ban-hed">
-                    Committed to  <br></br>
-                      <span className="clh1">Excellence</span>
-                    </h1>
-                    <p>Delivering precision and care in every procedure.</p>
-                    <a href="#" className="bbtn mt-2">
-                    Discover our Expertise
-                    </a>
-                  </div>
-
-                  <div className="w-years-wrp  d-flex gap-3 align-items-center">
-                    <img src="/images/cimages/72years.png" alt="" />
-                    <div className="w-y-con">
-                      <p className="w-bp">
-                        Celebrating 72+<br></br> years of quality care
-                      </p>
-                      <p className="">Since 1952</p>
-                    </div>
->>>>>>> 6d46a1bcd1de131623baf4fa1c98ef1317d86263
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <div className="w-banner-container">
-                <div className="w-rdiv w-rdiv3"></div>
-
-                <div className="w-l-div  d-flex justify-content-start  flex-column">
-                  <div className="w-feature-container  ">
-                    <div className="w-fea-d">
-                      <div className="w-f-icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40px"
-                          height="40px"
-                          viewBox="0 0 24 24">
-                          <path
-                            fill="#34c85a"
-                            d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"
-                          />
-                        </svg>
-                      </div>
-                      <div className="w-f-con">
-                        <p>
-                          Asia's Largest Integrated <br></br>Out-Patient Centre
-                        </p>
-                      </div>
-                    </div>
-                    <div className="w-fea-d">
-                      <div className="w-f-icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="35px"
-                          height="35px"
-                          viewBox="0 0 24 24">
-                          <g
-                            fill="none"
-                            stroke="#34c85a"
-                            strokeLinecap="round"
-                            strokeWidth="1.5">
-                            <path d="M16.472 20H4.1a.6.6 0 0 1-.6-.6V9.6a.6.6 0 0 1 .6-.6h2.768a2 2 0 0 0 1.715-.971l2.71-4.517a1.631 1.631 0 0 1 2.961 1.308l-1.022 3.408a.6.6 0 0 0 .574.772h4.576a2 2 0 0 1 1.929 2.526l-1.91 7A2 2 0 0 1 16.473 20Z" />
-                            <path strokeLinejoin="round" d="M7 20V9" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="w-f-con">
-                        <p>
-                          Excellence in <br></br>Quality Healthcare
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="banner-heading-d">
-                    <h1 className="ban-hed">
-                    <span className="clh1">Pioneering</span> <br></br>
-                     Tomorrow's Care
-                    </h1>
-                    <p>Advancing healthcare with cutting-edge technology.</p>
-                    <a href="#" className="bbtn mt-2">
-                    Learn More
-                    </a>
-                  </div>
-
-                  <div className="w-years-wrp  d-flex gap-3 align-items-center">
-                    <img src="/images/cimages/72years.png" alt="" />
-                    <div className="w-y-con">
-                      <p className="w-bp">
-                        Celebrating 72+<br></br> years of quality care
-                      </p>
-                      <p className="">Since 1952</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <div className="w-banner-container">
-                <div className="w-rdiv w-rdiv4"></div>
-
-                <div className="w-l-div  d-flex justify-content-start  flex-column">
-                  <div className="w-feature-container  ">
-                    <div className="w-fea-d">
-                      <div className="w-f-icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40px"
-                          height="40px"
-                          viewBox="0 0 24 24">
-                          <path
-                            fill="#34c85a"
-                            d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"
-                          />
-                        </svg>
-                      </div>
-                      <div className="w-f-con">
-                        <p>
-                          Asia's Largest Integrated <br></br>Out-Patient Centre
-                        </p>
-                      </div>
-                    </div>
-                    <div className="w-fea-d">
-                      <div className="w-f-icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="35px"
-                          height="35px"
-                          viewBox="0 0 24 24">
-                          <g
-                            fill="none"
-                            stroke="#34c85a"
-                            strokeLinecap="round"
-                            strokeWidth="1.5">
-                            <path d="M16.472 20H4.1a.6.6 0 0 1-.6-.6V9.6a.6.6 0 0 1 .6-.6h2.768a2 2 0 0 0 1.715-.971l2.71-4.517a1.631 1.631 0 0 1 2.961 1.308l-1.022 3.408a.6.6 0 0 0 .574.772h4.576a2 2 0 0 1 1.929 2.526l-1.91 7A2 2 0 0 1 16.473 20Z" />
-                            <path strokeLinejoin="round" d="M7 20V9" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="w-f-con">
-                        <p>
-                          Excellence in <br></br>Quality Healthcare
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="banner-heading-d">
-                    <h1 className="ban-hed">
-                    Compassion in  <br></br>
-                   <span className="clh1">Action</span>
-                    </h1>
-                    <p>Dedicated teams ensuring the best outcomes for you.</p>
-                    <a href="#" className="bbtn mt-2">See All Specialities</a>
-                  </div>
-
-                  <div className="w-years-wrp  d-flex gap-3 align-items-center">
-                    <img src="images/cimages/72years.png" alt="" />
-                    <div className="w-y-con">
-                      <p className="w-bp">
-                        Celebrating 72+<br></br> years of quality care
-                      </p>
-                      <p className="">Since 1952</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-
-        <div className="iop-wrp">
-          <div className="banner-heading-d  two">
-            <h1 className="ban-hed">
-              Care That <br></br>
-              <span className="clh1">Heals</span>
-            </h1>
-            <p>Expert medical care tailored to your needs.</p>
-            <a href="#" className="bbtn mt-2">
-              Explore Our Services
-            </a>
->>>>>>> 6d46a1bcd1de131623baf4fa1c98ef1317d86263
           </div>
         </SwiperSlide>
       </Swiper>
@@ -2274,119 +2076,6 @@ const MySwiperbanner = () => {
             </svg>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-
-      </section>
-      );
-  }
-
-
-  const MySwiperComponent = () => {
-    return (
-      <div>
-        <Swiper
-          //  modules={[Scrollbar]}
-          spaceBetween={25}
-          slidesPerView={4} // Adjust this value based on your layout
-          // scrollbar={{ draggable: true }} // Enable scrollbar
-          loop={true} // Enable looping
-          autoplay={{
-              delay: 3000, // Delay between slides in milliseconds
-                   disableOnInteraction: false, // Keep autoplay running even after user interaction
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1, spaceBetween: 10 }, // Small screens
-            580: { slidesPerView: 2, spaceBetween: 15 }, // Medium screens
-            992: { slidesPerView: 3, spaceBetween: 20 }, // Tablets
-            1500: { slidesPerView: 4, spaceBetween: 25 }, // Desktops
-          }}
-        >
-
-
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <div className="item">
-              <div className="alimg">
-                <img src="images/cimages/all-allied-services.png" alt="Allied Services" loading="lazy" />
-              </div>
-
-              <div className="allied-content">
-                <h2 className="htwo">
-                  Advanced Robotics <br />
-                  <span>System</span>
-                </h2>
-                <div className="right-arrow-circle"></div>
-              </div>
-
-              <div className="overlay"></div>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <div className="item">
-              <div className="alimg">
-                <img src="images/cimages/lactation-education.jpg" alt="" loading="lazy" />
-              </div>
-              <div className="allied-content">
-                <h2 className="htwo">Lactation Education</h2>
-                <div className="right-arrow-circle"></div>
-              </div>
-              <div className="overlay"></div>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 4 */}
-          <SwiperSlide>
-            <div className="item">
-              <div className="alimg">
-                <img src="images/cimages/dietetics.jpg" alt="" loading="lazy" />
-              </div>
-
-              <div className="allied-content">
-                <h2 className="htwo">Dietetics</h2>
-                <div className="right-arrow-circle"></div>
-              </div>
-
-              <div className="overlay"></div>
-            </div>
-          </SwiperSlide>
-
-           {/* Slide 5 */}
-           <SwiperSlide>
-            <div className="item">
-              <div className="alimg">
-                <img src="images/cimages/master-health-checkup.jpg" alt="" loading="lazy" />
-              </div>
-
-              <div className="allied-content">
-                <h2 className="htwo">Master Health <br /><span>Checkup</span></h2>
-                <div className="right-arrow-circle"></div>
-              </div>
-
-              <div className="overlay"></div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="item">
-              <div className="alimg">
-                <img src="images/cimages/lactation-education.jpg" alt="" loading="lazy" />
-              </div>
-              <div className="allied-content">
-                <h2 className="htwo">Lactation Education</h2>
-                <div className="right-arrow-circle"></div>
-              </div>
-              <div className="overlay"></div>
-            </div>
-          </SwiperSlide>
-
-        </Swiper>
-
-        {/* Optional: Add Scrollbar if required */}
-        {/* <div className="swiper-scrollbar"></div> */}
->>>>>>> 6d46a1bcd1de131623baf4fa1c98ef1317d86263
       </div>
     </section>
   );
