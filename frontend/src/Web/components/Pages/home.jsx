@@ -13,7 +13,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 // import MySwiperbanner from './banner-slider';
 import { CarouselComponent , OnlineAccessPortal, Testimonials, VlogCarousel} from './home-page-sliders';
-import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper} from './banner-slider';
+import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper2} from './banner-slider';
 
 
 
@@ -44,7 +44,7 @@ function Dashboard(){
         </section>
 
 
-<section className="pspace">
+<section className="pspace pt0">
 <div className="w-container">
 
 <div className="grid2">
@@ -114,7 +114,7 @@ function Dashboard(){
 
 <section className="pspace pt0">
     <div className="w-container">
-      <div className="w-box">
+      <div className="w-box  spec">
         <div className="ctop">
             <p>Explore Our Specialities</p>
             <div className="ctopa">
@@ -123,7 +123,7 @@ function Dashboard(){
             </div>
         </div>
 
-        <DoubleRowSwiper />
+        <DoubleRowSwiper2 />
 
       </div>
     </div>
@@ -237,7 +237,7 @@ function Dashboard(){
 
 
     <section className="pspace pt0 w-box">
-    <div className="w-container">
+    <div className="w-container allied w-box spec">
     <div className="ctop">
             <p>Allied Services</p>
             <div className="ctopa">
