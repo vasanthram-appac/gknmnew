@@ -105,6 +105,103 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
       );
     }
 
+    const SpecialitiesComponent = () => {
+      const options = {
+        margin: 20,
+        duration: 2000,
+        speed: 1000,
+        responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        loop: true,
+        nav: true,
+        dots: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+       },
+        responsive: {
+          0: { items: 1 },
+          450: { items: 2 },
+          700: { items: 3 },
+          980: { items: 4 },
+          1200: { items: 5 },
+          1680: { items: 6 },
+        },
+      };
+      return (
+        <div>
+          {/* Carousel Section */}
+          <OwlCarousel className="owl-theme doc-slider" {...options}>
+            <div className="w-photo">
+              <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Jenny Andersen</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/vignesh-anandhan.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Vignesh Anandhan</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/jenny-andersen1.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Jenny Andersen</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/arun-kumar.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Arun Kumar</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/kavyarasy.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Kavyarasy</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/santni.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Santni</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+              <div className="docimg"><img src="images/cimages/jenny-andersen.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Jenny Andersen</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/vignesh-anandhan.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Vignesh Anandhan</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+            <div className="w-photo">
+            <div className="docimg"><img src="images/cimages/jenny-andersen1.jpg" alt="" /></div>
+              <div className="doc-cnt">
+              <h3>Jenny Andersen</h3>
+              <p>MBBS, DA, DNB, IDCCM</p>
+              </div>
+            </div>
+          </OwlCarousel>
+        </div>
+      );
+    }
+
 
     const OnlineAccessPortal = () => {
       const options = {
@@ -520,5 +617,147 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
         );
       };
 
-    export  {OnlineAccessPortal ,CarouselComponent, Testimonials, VlogCarousel };
+      const DoctorsVlog = () => {
+        const options = {
+          loop: true,
+          margin: 25,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            580: {
+              items: 2,
+            },
+            1150: {
+              items: 3,
+            },
+          },
+        };
+
+        return (
+          <div className="eventslider">
+            <OwlCarousel className="owl-theme" {...options}>
+              {/* Slide 1 */}
+
+              <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+          <div><p className="event-date mt-0">October 19, 2024</p></div>
+         <div className="">
+          <h3 className="eventch4">Medical Thoracoscopy Programme at GKNM hospital</h3>
+          </div>
+        </div>
+       </div>
+    {/* Slide 2 */}
+       <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+          <div><p className="event-date mt-0">October 19, 2024</p></div>
+         <div className="">
+          <h3 className="eventch4">Medical Thoracoscopy Programme at GKNM hospital</h3>
+          </div>
+        </div>
+       </div>
+    {/* Slide 3 */}
+       <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+          <div><p className="event-date mt-0">October 19, 2024</p></div>
+         <div className="">
+          <h3 className="eventch4">Medical Thoracoscopy Programme at GKNM hospital</h3>
+          </div>
+        </div>
+       </div>
+    {/* Slide 4 */}
+       <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+          <div><p className="event-date mt-0">October 19, 2024</p></div>
+         <div className="">
+          <h3 className="eventch4">Medical Thoracoscopy Programme at GKNM hospital</h3>
+          </div>
+        </div>
+       </div>
+
+            </OwlCarousel>
+          </div>
+        );
+      };
+
+      const FacilitiesSlider = () => {
+        const options = {
+          loop: true,
+          margin: 25,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            580: {
+              items: 2,
+            },
+            1150: {
+              items: 3,
+            },
+          },
+        };
+
+        return (
+          <div className="FacilitiesSlider">
+            <OwlCarousel className="owl-theme" {...options}>
+              {/* Slide 1 */}
+
+              <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+
+         <div className="">
+          <h3 className="eventch4">Cardiology - GKNM Hospital / Patient testimony</h3>
+          </div>
+        </div>
+       </div>
+    {/* Slide 2 */}
+       <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+
+         <div className="">
+          <h3 className="eventch4">Cardiology - GKNM Hospital / Patient testimony</h3>
+          </div>
+        </div>
+       </div>
+    {/* Slide 3 */}
+       <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+
+         <div className="">
+          <h3 className="eventch4">Cardiology - GKNM Hospital / Patient testimony</h3>
+          </div>
+        </div>
+       </div>
+    {/* Slide 4 */}
+       <div>
+        <div className="eventdimg"><img src="images/cimages/thoracoscopy-event1.webp" alt="" /></div>
+        <div>
+
+         <div className="">
+          <h3 className="eventch4">Cardiology - GKNM Hospital / Patient testimony</h3>
+          </div>
+        </div>
+       </div>
+
+            </OwlCarousel>
+          </div>
+        );
+      };
+
+    export  {OnlineAccessPortal ,CarouselComponent, Testimonials, VlogCarousel, SpecialitiesComponent, DoctorsVlog, FacilitiesSlider };
 

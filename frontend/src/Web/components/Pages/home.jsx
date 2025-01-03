@@ -13,7 +13,11 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 // import MySwiperbanner from './banner-slider';
 import { CarouselComponent , OnlineAccessPortal, Testimonials, VlogCarousel} from './home-page-sliders';
+<<<<<<< HEAD
 import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper, DoubleRowSwiper2} from './banner-slider';
+=======
+import { MySwiperbanner, MySwiperComponent, DoubleRowSwiper2} from './banner-slider';
+>>>>>>> 32039dbe379c1c8cf45df1a5bcbfa1bc423f7d01
 
 
 
@@ -57,7 +61,7 @@ function Dashboard(){
         </section>
 
 
-<section className="pspace">
+<section className="pspace pt0">
 <div className="w-container">
 
 <div className="grid2">
