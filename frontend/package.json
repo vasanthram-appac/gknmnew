@@ -12,11 +12,11 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@mui/icons-material": "^6.2.1",
     "@mui/material": "^6.2.1",
     "@mui/x-data-grid": "^7.23.3",
     "bootstrap": "^5.3.3",
-    
     "jquery": "^3.7.1",
     "jspdf": "^2.5.2",
     "magnific-popup": "^1.2.0",
